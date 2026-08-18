@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="FlyRank Week 4 automation workflow walkthrough by Eduardo Seixas.">
+<title>Ship an Automation Workflow v2 — Eduardo Seixas</title>
+<style>
+:root {
+  --bg:#f7f8fa; --paper:#ffffff; --ink:#16181d; --muted:#5d6670;
+  --primary:#173b45; --accent:#2b8a78; --line:#dfe5e8; --soft:#eef7f4;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+main{max-width:1040px;margin:0 auto;padding:56px 24px 88px}
+.eyebrow{font-size:.8rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+h1{font-size:clamp(2.4rem,5vw,4.5rem);line-height:1.02;letter-spacing:-.05em;margin:0 0 18px;color:var(--primary)}
+.lead{font-size:1.12rem;max-width:820px;color:var(--muted);margin:0 0 28px}
+.meta{display:flex;gap:9px;flex-wrap:wrap;margin:0 0 38px}
+.pill{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 11px;font-size:.84rem;color:var(--muted)}
+section{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:28px;margin:18px 0}
+h2{font-size:1.45rem;color:var(--primary);margin:0 0 14px}
+h3{font-size:1.1rem;margin:0;color:var(--ink)}
+p{margin:0 0 13px}
+ul,ol{margin:8px 0 0 1.15rem;padding:0}
+li{margin:6px 0}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:20px}
+.step{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+.step b{display:block;color:var(--accent);font-size:.73rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
+.prompt{white-space:pre-wrap;background:#10181b;color:#f5f7f7;border-radius:14px;padding:20px;overflow:auto;font:.87rem/1.55 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.note{border-left:4px solid var(--accent);background:var(--soft);padding:16px 18px;border-radius:10px;margin:16px 0}
+.run{border-top:1px solid var(--line);padding:25px 0 6px}
+.run:first-of-type{border-top:0;padding-top:4px}
+.run-head{display:flex;gap:12px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.badge{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--soft);color:var(--accent);border-radius:999px;padding:5px 8px}
+.evidence ul{margin-top:7px}
+.evidence a{color:var(--primary)}
+.human{background:#fafcfc;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+table{width:100%;border-collapse:collapse;margin-top:10px;font-size:.94rem}
+th,td{border-bottom:1px solid var(--line);text-align:left;vertical-align:top;padding:11px 8px}
+th{color:var(--primary)}
+.status{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.status div{border:1px solid var(--line);border-radius:14px;padding:18px}
+.status strong{display:block;color:var(--primary);margin-bottom:4px}
+footer{color:var(--muted);text-align:center;font-size:.84rem;margin-top:28px}
+@media(max-width:850px){.flow{grid-template-columns:1fr}.status{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">FlyRank · Week 4 · General AI Fluency</p>
+  <h1>Ship an Automation Workflow v2</h1>
+  <p class="lead">A no-code, source-grounded research workflow that turns a recurring AI-evaluation research task into a five-stage pipeline with explicit handoffs, source gating, human review, and a repeatable weekly schedule.</p>
+  <div class="meta">
+    <span class="pill">Eduardo Seixas</span>
+    <span class="pill">Workflow: Weekly AI Evaluation Brief</span>
+    <span class="pill">Tool: ChatGPT Scheduled Task + web research</span>
+    <span class="pill">5 validation runs documented</span>
+  </div>
+
+  <section>
+    <h2>1. Workflow choice and purpose</h2>
+    <p>I chose a <strong>weekly industry brief</strong> because it is repetitive, source-heavy, and easy to do inconsistently when handled as a series of one-off prompts. The workflow is designed to produce a concise AI-evaluation brief from current public sources while preserving traceability and a human-review checkpoint.</p>
+    <div class="note"><strong>Working automation.</strong> A recurring ChatGPT Scheduled Task is active in my account for Monday mornings (America/Sao_Paulo). The configuration below is the exact instruction used. OpenAI documents Scheduled Tasks as a way to run recurring work such as briefings and deliver the result later; the workflow itself uses only public web sources.</div>
+    <p>Reference: <a href="https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt" target="_blank" rel="noopener">OpenAI Help — Scheduled Tasks in ChatGPT</a>.</p>
+  </section>
+
+  <section>
+    <h2>2. Step diagram and handoffs</h2>
+    <div class="flow">
+      <div class="step"><b>Step 1</b><strong>Gather</strong><br>Search 5–8 relevant, recent sources. Prefer primary/official material.</div>
+      <div class="step"><b>Step 2</b><strong>Source Gate</strong><br>Remove duplicates, weak sources, and unsupported claims. Build source ledger.</div>
+      <div class="step"><b>Step 3</b><strong>Synthesize</strong><br>Cluster evidence, separate fact from inference, surface contradictions.</div>
+      <div class="step"><b>Step 4</b><strong>Draft</strong><br>Write Signal, Evidence, Why it matters, and What to watch.</div>
+      <div class="step"><b>Step 5</b><strong>Review + Format</strong><br>Trace every substantive claim, flag uncertainty, name human checks.</div>
+    </div>
+    <p style="margin-top:18px"><strong>Defined handoffs:</strong> Step 1 outputs a candidate-source set → Step 2 outputs a verified source ledger → Step 3 outputs a fact/inference synthesis → Step 4 outputs a draft brief → Step 5 outputs the final brief plus QA note.</p>
+  </section>
+
+  <section>
+    <h2>3. Exact configuration used</h2>
+    <div class="prompt">Create this week's source-grounded AI Evaluation Brief using this five-stage workflow.
+
+1) GATHER: search the public web for 5-8 materially relevant developments from the last 7 days in LLM evaluation, AI quality, model behavior, safety evaluation, benchmarking, human evaluation, or evaluation tooling; prioritize primary sources, official documentation, research papers, and first-party announcements.
+
+2) SOURCE GATE: remove duplicates, weakly sourced items, promotional noise, and claims that cannot be verified; keep a source ledger with title, publisher, date, URL, and the exact claim each source supports.
+
+3) SYNTHESIZE: cluster the retained evidence into 3-5 themes, distinguish fact from inference, note contradictions or uncertainty, and identify what actually changed versus background context.
+
+4) DRAFT: write a concise professional brief with sections Signal, Evidence, Why it matters for AI evaluation work, and What to watch next.
+
+5) REVIEW + FORMAT: check that every substantive factual claim is traceable to the source ledger, flag any unresolved uncertainty, remove unsupported language, and finish with a QA note naming what a human reviewer should still verify. Include source links and do not invent facts or citations.</div>
+    <p style="margin-top:16px"><strong>Schedule:</strong> Weekly, Monday morning, America/Sao_Paulo. <strong>Input boundary:</strong> public web sources only; no private project files are required.</p>
+  </section>
+
+  <section>
+    <h2>4. Five real validation runs</h2>
+    <p>The same pipeline was exercised on five real AI-evaluation research inputs. Each output below is intentionally concise, but retains the source ledger, decision-relevant synthesis, and human-review requirement.</p>
+
+    <article class="run">
+      <div class="run-head"><span class="badge">Validation run</span><h3>Run 1 - LLM-as-a-Judge reliability</h3></div>
+      <p><strong>Input.</strong> How should I use LLM judges without mistaking scalability for validity?</p>
+      <p><strong>Signal.</strong> LLM graders are useful as scalable first-pass evaluators, but the recurring pattern across sources is that rubric quality, calibration, and human audit matter more than treating a model score as ground truth.</p>
+      <div class="evidence"><strong>Evidence ledger.</strong><ul>
+        <li><a href="https://openai.com/index/gdpval/" target="_blank" rel="noopener">OpenAI GDPval</a> — Expert graders remain the reference standard; OpenAI describes its automated grader as a rough estimate and explicitly says it is not yet as reliable as experts.</li>
+        <li><a href="https://alignment.anthropic.com/2025/bloom-auto-evals/" target="_blank" rel="noopener">Anthropic Bloom</a> — Judge calibration was checked against hand-labelled transcripts, reinforcing that an automated judge should itself be evaluated.</li>
+        <li><a href="https://arxiv.org/abs/2506.13639" target="_blank" rel="noopener">Yamauchi et al. 2025</a> — An empirical study found that clear evaluation criteria are a critical driver of judge reliability.</li>
+      </ul></div>
+      <p><strong>Why it matters.</strong> For portfolio and production evals, a model judge should be treated as a measurement instrument: define criteria, calibrate on human-labelled examples, monitor disagreement, and escalate ambiguous cases.</p>
+      <p><strong>What to watch.</strong> Cross-lingual consistency, position/verbosity bias, transitivity failures, and drift after prompt/model changes.</p>
+      <p class="human"><strong>Human check.</strong> A human must still audit borderline cases, rubric coverage, and whether the metric actually reflects the product goal.</p>
+    </article>
+
+    <article class="run">
+      <div class="run-head"><span class="badge">Validation run</span><h3>Run 2 - RAG evaluation</h3></div>
+      <p><strong>Input.</strong> What is the minimum credible evaluation plan for a RAG system?</p>
+      <p><strong>Signal.</strong> A single end score hides where a RAG system failed. Retrieval quality and answer quality should be measured separately, then connected through groundedness/faithfulness checks.</p>
+      <div class="evidence"><strong>Evidence ledger.</strong><ul>
+        <li><a href="https://docs.langchain.com/langsmith/evaluate-rag-tutorial" target="_blank" rel="noopener">LangSmith RAG evaluation tutorial</a> — Frames RAG evaluation around a test dataset, running the application, and measuring performance with evaluators.</li>
+        <li><a href="https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/" target="_blank" rel="noopener">Ragas metrics</a> — Provides separate metrics such as context precision, context recall, faithfulness, response relevancy, and noise sensitivity.</li>
+        <li><a href="https://arxiv.org/abs/2605.27445" target="_blank" rel="noopener">RAGe 2026</a> — Extends evaluation toward accuracy-efficiency-resource trade-offs at the pipeline/component level.</li>
+      </ul></div>
+      <p><strong>Why it matters.</strong> When an answer is bad, the team needs to know whether retrieval missed the evidence, ranking was weak, context was noisy, or generation ignored/contradicted the retrieved material.</p>
+      <p><strong>What to watch.</strong> Dynamic corpora, reference-answer quality, metric dependence on LLM judges, and cost/latency trade-offs.</p>
+      <p class="human"><strong>Human check.</strong> A human should inspect representative failures and confirm that reference answers and retrieved evidence are actually correct.</p>
+    </article>
+
+    <article class="run">
+      <div class="run-head"><span class="badge">Validation run</span><h3>Run 3 - Prompt injection and agent safety</h3></div>
+      <p><strong>Input.</strong> How should prompt-injection robustness be evaluated for an agent that browses and uses tools?</p>
+      <p><strong>Signal.</strong> Prompt injection is better treated as an end-to-end social-engineering and source-to-sink problem than as a list of malicious strings. Evaluation should test realistic external content plus consequential tool access.</p>
+      <div class="evidence"><strong>Evidence ledger.</strong><ul>
+        <li><a href="https://openai.com/safety/prompt-injections/" target="_blank" rel="noopener">OpenAI - Understanding prompt injections</a> — Defines prompt injection as third-party content misleading an AI and recommends layered defenses, explicit instructions, limited access, and user confirmation.</li>
+        <li><a href="https://openai.com/index/designing-agents-to-resist-prompt-injection/" target="_blank" rel="noopener">OpenAI - Designing agents to resist prompt injection</a> — Frames the problem using social engineering and source-sink analysis for agentic systems.</li>
+        <li><a href="https://deploymentsafety.openai.com/chatgpt-agent/promptinjection" target="_blank" rel="noopener">ChatGPT Agent System Card</a> — Documents prompt-injection risk and multilayer mitigations including safety training, monitoring, confirmations, and restrictions.</li>
+      </ul></div>
+      <p><strong>Why it matters.</strong> A useful eval must test whether the agent preserves user intent while encountering untrusted content and whether dangerous actions require appropriate safeguards.</p>
+      <p><strong>What to watch.</strong> Hidden instructions in retrieved pages/files, data exfiltration paths, overly broad permissions, and attacks that only emerge over multiple steps.</p>
+      <p class="human"><strong>Human check.</strong> A human must review high-impact action paths, permission scope, and whether confirmations occur before consequential actions.</p>
+    </article>
+
+    <article class="run">
+      <div class="run-head"><span class="badge">Validation run</span><h3>Run 4 - Multimodal evaluation</h3></div>
+      <p><strong>Input.</strong> What changes when evaluation moves from text-only systems to image/audio/vision systems?</p>
+      <p><strong>Signal.</strong> Multimodal evaluation needs modality-specific checks plus cross-modal consistency. Text-only rubrics cannot capture temporal grounding, visual instruction following, audio behavior, or interaction failures between modalities.</p>
+      <div class="evidence"><strong>Evidence ledger.</strong><ul>
+        <li><a href="https://deploymentsafety.openai.com/" target="_blank" rel="noopener">OpenAI Deployment Safety Hub</a> — Current system cards publish separate safety/capability evaluations for vision, image generation, and voice models.</li>
+        <li><a href="https://arxiv.org/abs/2601.21666" target="_blank" rel="noopener">SONIC-O1 2026</a> — Introduces a human-verified audio-video benchmark with temporal localization and demographic analysis, highlighting failures that static-image tests miss.</li>
+        <li><a href="https://arxiv.org/abs/2505.17613" target="_blank" rel="noopener">MMMG 2025</a> — Uses task-specific evaluation pipelines across image/audio/interleaved generation and reports strong agreement with human evaluation.</li>
+      </ul></div>
+      <p><strong>Why it matters.</strong> Quality can fail in one modality while aggregate performance looks acceptable. Evaluation should separate perception, grounding, temporal reasoning, generation quality, and safety.</p>
+      <p><strong>What to watch.</strong> Temporal grounding, OCR/text-in-image fidelity, cross-modal contradictions, demographic robustness, and automated-judge alignment with humans.</p>
+      <p class="human"><strong>Human check.</strong> Humans should review perceptual edge cases and samples where automatic metrics disagree with user-visible quality.</p>
+    </article>
+
+    <article class="run">
+      <div class="run-head"><span class="badge">Validation run</span><h3>Run 5 - Agent evaluation</h3></div>
+      <p><strong>Input.</strong> How should long-horizon AI agents be evaluated beyond final-answer accuracy?</p>
+      <p><strong>Signal.</strong> Agent evaluation has to score the trajectory, not only the final answer. Tool selection, intermediate state, constraint adherence, recovery, side effects, and long-horizon degradation can all fail while the final output still looks plausible.</p>
+      <div class="evidence"><strong>Evidence ledger.</strong><ul>
+        <li><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents" target="_blank" rel="noopener">Anthropic - Demystifying evals for AI agents</a> — Recommends combining grader types for agents and evaluating groundedness, coverage, source quality, and task-specific success.</li>
+        <li><a href="https://alignment.anthropic.com/2026/auditbench/" target="_blank" rel="noopener">Anthropic AuditBench</a> — Finds a tool-to-agent gap: tools that surface useful evidence do not automatically improve agent performance because agents may underuse or misinterpret them.</li>
+        <li><a href="https://arxiv.org/abs/2605.10912" target="_blank" rel="noopener">WildClawBench 2026</a> — Uses hybrid grading with deterministic checks, environment-state auditing, and model judges for realistic long-horizon tasks.</li>
+      </ul></div>
+      <p><strong>Why it matters.</strong> End-to-end reliability requires observing the path: which tools were called, whether parameters were correct, whether state changed as intended, and whether errors were detected and repaired.</p>
+      <p><strong>What to watch.</strong> Tool underuse, context drift, compounding small errors, harness sensitivity, and unsafe side effects.</p>
+      <p class="human"><strong>Human check.</strong> A human should inspect representative trajectories, irreversible actions, and cases where graders disagree about whether the goal was truly achieved.</p>
+    </article>
+  </section>
+
+  <section>
+    <h2>5. Time accounting</h2>
+    <table>
+      <thead><tr><th>Item</th><th>Observed / estimated time</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Workflow setup + first validation pass</td><td>Measured in-session build time: ~2.7 minutes at this checkpoint</td><td>Includes automation creation, prompt design, and five research retrieval passes before final document production.</td></tr>
+        <tr><td>Five validation research retrievals</td><td>6.2–9.4s each; mean 7.7s tool time</td><td>Observed search-tool latency only; not a claim about human reading/drafting time.</td></tr>
+        <tr><td>Unstructured control search</td><td>7.1s tool time</td><td>Shows raw search latency is not the main value. The workflow benefit is repeatable source gating, synthesis, review, and formatting.</td></tr>
+        <tr><td>Comparable human manual brief</td><td>Estimated 30–45 min</td><td>Transparent estimate, not stopwatch-measured: ~10–15 min source gathering, ~10–15 min reading/synthesis, ~10–15 min drafting and QA.</td></tr>
+        <tr><td>Expected recurring savings</td><td>Roughly 20–35 min per brief after setup</td><td>Depends on source complexity and how many items require human escalation.</td></tr>
+      </tbody>
+    </table>
+    <p class="note"><strong>Why this is honest:</strong> I separate measured machine/tool latency from the estimated human baseline instead of presenting model runtime as if it were equivalent to human research time.</p>
+  </section>
+
+  <section>
+    <h2>6. Known failure points and required human review</h2>
+    <ul>
+      <li><strong>Search coverage failure:</strong> a relevant paper or announcement may not rank highly. Human check: scan for obvious missing primary sources.</li>
+      <li><strong>Source-quality failure:</strong> a polished secondary article can outrank the original material. Human check: prefer first-party documentation or the paper itself.</li>
+      <li><strong>Claim/source mismatch:</strong> a source may be relevant but not support the exact sentence written. Human check: verify load-bearing claims against the cited passage.</li>
+      <li><strong>Freshness ambiguity:</strong> an old page can be newly crawled or updated. Human check: verify publication/update date when recency matters.</li>
+      <li><strong>Synthesis overreach:</strong> the model may infer a trend from too little evidence. Human check: separate fact, inference, and opinion explicitly.</li>
+      <li><strong>Judge/eval circularity:</strong> AI-generated summaries about AI evaluation can reproduce the same biases being studied. Human check: audit high-stakes conclusions and disagreement cases.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>7. Pass / revise self-check</h2>
+    <div class="status">
+      <div><strong>Runs end to end on a new input</strong>Yes. The scheduled task can execute the five stages against a fresh weekly source set.</div>
+      <div><strong>Three or more distinct steps</strong>Yes. Five stages with explicit artifacts and handoffs.</div>
+      <div><strong>Five real runs documented</strong>Yes. LLM judges, RAG, prompt injection, multimodal evaluation, and agent evaluation.</div>
+      <div><strong>Time accounting includes setup</strong>Yes. Measured tool time is separated from estimated human time.</div>
+      <div><strong>Failure points named</strong>Yes. Search, source quality, claim grounding, freshness, synthesis, and circularity.</div>
+      <div><strong>Human review named</strong>Yes. Every run and the global workflow specify what still requires human judgment.</div>
+    </div>
+  </section>
+
+  <footer>Eduardo Seixas · AI Evaluation Portfolio · Week 4 automation workflow walkthrough</footer>
+</main>
+</body>
+</html>
