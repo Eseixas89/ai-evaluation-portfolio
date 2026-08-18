@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Week 4 stack rationale for Eduardo Seixas's AI Evaluation portfolio." />
+  <title>Three Roads: Choose Your Stack with AI — Eduardo Seixas</title>
+  <style>
+    :root{
+      --bg:#f7f8fa;
+      --paper:#ffffff;
+      --ink:#16181d;
+      --muted:#5d6670;
+      --primary:#173b45;
+      --accent:#2b8a78;
+      --line:#dfe5e8;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.62}
+    main{max-width:980px;margin:0 auto;padding:56px 24px 80px}
+    .eyebrow{font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}
+    h1{font-size:clamp(2.2rem,5vw,4.1rem);line-height:1.04;letter-spacing:-.045em;margin:0 0 18px;color:var(--primary)}
+    .lead{font-size:1.13rem;max-width:760px;color:var(--muted);margin:0 0 34px}
+    .meta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:38px}
+    .pill{border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:7px 11px;font-size:.85rem;color:var(--muted)}
+    section{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:28px;margin:18px 0}
+    h2{font-size:1.35rem;margin:0 0 14px;color:var(--primary)}
+    h3{font-size:1.02rem;margin:22px 0 8px;color:var(--ink)}
+    p{margin:0 0 14px}
+    ul{margin:10px 0 0 1.1rem;padding:0}
+    li{margin:6px 0}
+    .option{border-left:4px solid var(--line);padding-left:18px;margin:24px 0}
+    .option.chosen{border-left-color:var(--accent)}
+    .label{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:5px}
+    .decision{background:linear-gradient(180deg,#ffffff 0%,#f4faf8 100%);border-color:#cfe4de}
+    .qa{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+    .qa div{border:1px solid var(--line);border-radius:14px;padding:18px;background:#fff}
+    .qa strong{display:block;color:var(--primary);margin-bottom:4px}
+    footer{color:var(--muted);font-size:.85rem;margin-top:26px;text-align:center}
+    @media (max-width:700px){.qa{grid-template-columns:1fr}section{padding:22px}main{padding-top:38px}}
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Week 4 · General AI Fluency</p>
+  <h1>Three Roads: Choose Your Stack with AI</h1>
+  <p class="lead">A practical stack decision for an AI evaluation portfolio: three genuine options, the trade-offs behind each, and why the simplest one is the right choice for the work I need to show today.</p>
+  <div class="meta">
+    <span class="pill">Eduardo Seixas</span>
+    <span class="pill">AI Evaluation Portfolio</span>
+    <span class="pill">Chosen stack: GitHub Pages + HTML/CSS</span>
+    <span class="pill">Backend: not yet</span>
+  </div>
+
+  <section>
+    <h2>1. Constraints</h2>
+    <p><strong>Free only.</strong> I do not want the portfolio to depend on a paid hosting plan while I am still building and refining it.</p>
+    <p><strong>Honest skill level.</strong> I am comfortable working with basic HTML, CSS, GitHub, and a simple static-site structure. I do not want the portfolio to become a framework-learning project. The purpose is to showcase AI evaluation work, not to prove that I can maintain a complex web application.</p>
+    <p><strong>What the portfolio must display.</strong> The site needs to present case studies, screenshots, evaluation artifacts, PDFs, repository links, structured findings, and concise explanatory text. The design should stay quiet enough that evidence remains the focus.</p>
+    <p><strong>Dynamic needs.</strong> Nothing currently needs to be dynamic. I do not need authentication, a database, server-side processing, or user-generated content at this stage.</p>
+  </section>
+
+  <section>
+    <h2>2. Three Stack Options</h2>
+
+    <div class="option chosen">
+      <span class="label">Option 1 · Front-runner</span>
+      <h3>GitHub Pages + plain HTML/CSS</h3>
+      <p><strong>How I would build it:</strong> keep the portfolio in a public GitHub repository, write the interface in standard HTML/CSS, and deploy it with GitHub Pages and GitHub Actions.</p>
+      <p><strong>Where it would host:</strong> GitHub Pages, free.</p>
+      <p><strong>Backend:</strong> none.</p>
+      <p><strong>Real trade-off:</strong> if I later need authentication, databases, server-side logic, or advanced application behavior, GitHub Pages alone will not provide them. Today, none of those features are required.</p>
+    </div>
+
+    <div class="option">
+      <span class="label">Option 2</span>
+      <h3>Netlify + static site</h3>
+      <p><strong>How I would build it:</strong> the same basic static site, connected to the GitHub repository and deployed through Netlify.</p>
+      <p><strong>Where it would host:</strong> Netlify free tier.</p>
+      <p><strong>Backend:</strong> not required, although the platform offers additional services if the project grows.</p>
+      <p><strong>Real trade-off:</strong> Netlify adds useful deployment features, but for my current portfolio most of them would go unused. It would also introduce another platform to maintain without solving a problem I actually have.</p>
+    </div>
+
+    <div class="option">
+      <span class="label">Option 3</span>
+      <h3>Vercel + a modern web framework</h3>
+      <p><strong>How I would build it:</strong> use a framework such as Next.js and deploy it on Vercel.</p>
+      <p><strong>Where it would host:</strong> Vercel free tier for this scale.</p>
+      <p><strong>Backend:</strong> optional; APIs and server-side behavior could be added later.</p>
+      <p><strong>Real trade-off:</strong> this is the most powerful option, but it solves problems I do not currently have. A framework would add dependencies, configuration, build concepts, and maintenance overhead without making the evidence in my case studies stronger.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>3. Pressure Test</h2>
+    <p>The front-runner is <strong>GitHub Pages with plain HTML/CSS</strong>.</p>
+    <p><strong>What breaks if I choose the simplest option?</strong> Future application-like features would require a different architecture or an additional service. GitHub Pages cannot become a full backend by itself.</p>
+    <p><strong>Does that stop me from showing my work properly?</strong> No. My portfolio is based on screenshots, rubrics, findings, evaluation artifacts, written case studies, PDFs, links, and conclusions. All of these work well on a static site.</p>
+    <p><strong>What do I maintain if I choose the most powerful option?</strong> A framework, package dependencies, build configuration, deployment conventions, and more moving parts. I can learn those things, but right now they would take attention away from improving the portfolio itself.</p>
+    <p><strong>Can I finish the simple version quickly?</strong> Yes. In fact, the public GitHub Pages deployment is already live, which turns this choice from a hypothetical architecture into a working one.</p>
+  </section>
+
+  <section class="decision">
+    <h2>4. Decision</h2>
+    <p>I chose <strong>GitHub Pages with plain HTML/CSS</strong>.</p>
+    <p>I did not choose it because it is the most powerful stack. I chose it because it is the smallest stack that fully satisfies the real requirements of my portfolio.</p>
+    <p>I considered Netlify, which offers a similarly simple static deployment with more platform features, and Vercel with a modern framework, which offers much more room for dynamic development. Both are valid choices, but neither currently solves an important problem that GitHub Pages cannot solve.</p>
+    <p>The deciding factor is maintainability. A static site is small, transparent, version-controlled, and easy for me to inspect directly. If the portfolio later develops a genuine need for dynamic functionality, I can migrate then. I do not need to pay that complexity cost before the requirement exists.</p>
+
+    <div class="qa">
+      <div><strong>Can I maintain this?</strong>Yes. The stack is small, understandable, version-controlled, and already working.</div>
+      <div><strong>Does it show my work well?</strong>Yes. It keeps the technology quiet so the evidence, case studies, criteria, and conclusions remain the focus.</div>
+    </div>
+    <p style="margin-top:20px"><strong>Backend: not yet.</strong> At this stage, adding one would increase complexity without improving what the portfolio is intended to demonstrate.</p>
+  </section>
+
+  <footer>Eduardo Seixas · AI Evaluation Portfolio · Week 4 submission material</footer>
+</main>
+</body>
+</html>
