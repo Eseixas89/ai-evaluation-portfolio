@@ -52,6 +52,13 @@ h1 {
   line-height: 1.55;
 }
 
+.intro > p:not(.eyebrow):not(.claim):not(.status) {
+  max-width: 66ch;
+  margin: 1.25rem 0 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
 .status {
   margin: 2rem 0 0;
   color: var(--muted);
