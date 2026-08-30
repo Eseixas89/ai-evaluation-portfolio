@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Week 5 Explain It Like You Built It submission." />
+  <title>Explain It Like You Built It — Eduardo Seixas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <section class="intro" aria-labelledby="title">
+      <p class="eyebrow">Week 5 · Explain It Like You Built It</p>
+      <h1 id="title">How my portfolio gets published</h1>
+
+      <p class="claim">One part of my build I wanted to understand better was how pushing my files to GitHub actually turns them into a live website.</p>
+
+      <p>My project has a GitHub Actions workflow that watches the main branch. When I push a change there, GitHub starts the workflow automatically. It first gets a copy of the repository, prepares GitHub Pages, packages the website files, and then deploys that package.</p>
+
+      <p>What helped me understand it is that GitHub is not simply showing my HTML file from the repository. The workflow is the bridge between the code I keep in the repository and the version people can open as a website.</p>
+
+      <p>So now I understand that changing the site and publishing the site are two different steps: I change the files, push them to main, and the deployment workflow takes care of making that new version live.</p>
+    </section>
+  </main>
+</body>
+</html>
