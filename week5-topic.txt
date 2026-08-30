@@ -1,1 +1,0 @@
-How my portfolio gets published with GitHub Actions and GitHub Pages.
