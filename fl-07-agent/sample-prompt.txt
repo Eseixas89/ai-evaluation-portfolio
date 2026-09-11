@@ -1,0 +1,1 @@
+Prepare this week's AI evaluation brief. Focus on developments that materially affect evaluation methodology, agent reliability, RAG quality, or human-AI workflows. Prefer primary sources and tell me when the evidence is weak.
