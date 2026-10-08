@@ -14,7 +14,7 @@
 <main>
 <p class="eyebrow">FlyRank · Week 5 · General AI Fluency</p>
 <h1>Build the Agent</h1>
-<p class="lead"><strong>AI Evaluation Research Scout</strong> — a working MVP that reads portfolio context live from GitHub, researches current evidence with Google Search grounding, and produces a bounded, evidence-backed brief without mid-run editing.</p>
+<p class="lead"><strong>AI Evaluation Research Scout</strong> — an MVP implementation designed to read portfolio context live from GitHub, research current evidence with Google Search grounding, and produce an evidence-backed brief. A successful end-to-end model run and raw recording are still required for submission.</p>
 <div class="meta"><span class="pill">Eduardo Seixas</span><span class="pill">Code: FL-07</span><span class="pill">MVP</span><span class="pill">Read-only</span><span class="pill">Live tools</span></div>
 
 <section>
@@ -71,6 +71,7 @@ python -m venv .venv
 # activate the environment
 pip install -r requirements.txt
 # set GEMINI_API_KEY in the environment
+python agent.py --check
 python agent.py</div>
 <p class="small" style="margin-top:10px">The API key is intentionally never stored in the repository.</p>
 </section>
