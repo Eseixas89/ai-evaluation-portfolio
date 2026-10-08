@@ -14,31 +14,31 @@
 <main>
 <p class="eyebrow">FlyRank · Week 5 · General AI Fluency</p>
 <h1>Build the Agent</h1>
-<p class="lead"><strong>AI Evaluation Research Scout</strong> — an MVP implementation designed to read portfolio context live from GitHub, research current evidence with Google Search grounding, and produce an evidence-backed brief. A successful end-to-end model run and raw recording are still required for submission.</p>
+<p class="lead"><strong>AI Evaluation Research Scout</strong> — a reusable ChatGPT workflow that reads portfolio context live from GitHub, researches primary sources, and produces an evidence-backed brief. The run report and observed tool log are included in the ChatGPT build folder; the raw screen recording remains a separate submission step.</p>
 <div class="meta"><span class="pill">Eduardo Seixas</span><span class="pill">Code: FL-07</span><span class="pill">MVP</span><span class="pill">Read-only</span><span class="pill">Live tools</span></div>
 
 <section>
 <h2>1. Core job</h2>
 <p>The agent keeps the FL-06 job unchanged: find a small number of meaningful developments in AI evaluation, AI quality, agents, RAG, and human-AI workflows; prefer primary sources; remove duplicate coverage; surface uncertainty; and explain why each finding matters to the existing portfolio.</p>
-<div class="grid"><div class="card"><b>Input</b>“Prepare this week’s AI evaluation brief” or a focused research question.</div><div class="card"><b>Output</b>3–5 findings, evidence URLs, why each matters, uncertainty, exclusions, and suggested follow-up.</div></div>
+<div class="grid"><div class="card"><b>Input</b>“Prepare this week’s AI evaluation brief” or a focused research question.</div><div class="card"><b>Output</b>Up to five findings, evidence URLs, why each matters, uncertainty, exclusions, and suggested follow-up.</div></div>
 </section>
 
 <section>
 <h2>2. Live connections</h2>
-<div class="grid"><div class="card"><b>GitHub</b>At runtime the agent reads selected public portfolio artifacts from <code>Eseixas89/ai-evaluation-portfolio</code>.</div><div class="card"><b>Google Search grounding</b>Gemini performs current web research and returns grounded evidence/citations.</div></div>
+<div class="grid"><div class="card"><b>GitHub</b>At runtime the agent reads selected public portfolio artifacts from <code>Eseixas89/ai-evaluation-portfolio</code>.</div><div class="card"><b>ChatGPT web research</b>The agent searches current information, opens primary pages, and records evidence URLs and uncertainty.</div></div>
 <p class="small">The agent itself has no GitHub write path. External behavior is deliberately read-only.</p>
 </section>
 
 <section>
 <h2>3. End-to-end loop</h2>
-<div class="flow">Request → live GitHub context → grounded web research → synthesis → Markdown brief → saved run artifact</div>
-<p style="margin-top:12px">A successful run requires no hand-editing in the middle. The terminal prints the live connection steps before the final report so the raw recording shows the whole loop.</p>
+<div class="flow">Request → live GitHub context → primary-source research → evidence review → brief and observed run log</div>
+<p style="margin-top:12px">A successful run requires no hand-editing in the middle. The ChatGPT transcript shows tool activity, and the final report records the observed reads and searches. A written log does not replace the raw screen recording.</p>
 </section>
 
 <section>
 <h2>4. Change from FL-06</h2>
-<p>FL-06 proposed a Custom GPT / ChatGPT-based surface. The FL-07 implementation uses <strong>Python + Gemini API / Google AI Studio</strong> instead. The platform changed for reproducibility and a clearer source-controlled demo; the core job, evidence rules, bounded autonomy, read-only behavior, and human-approval boundary remain unchanged.</p>
-<div class="callout"><strong>Documented deviation:</strong> this is an implementation-platform change, not a change to the agent’s job.</div>
+<p>FL-06 proposed a Custom GPT / ChatGPT-based surface. The primary FL-07 implementation now uses a <strong>reusable ChatGPT skill</strong> with the host’s live reading and research tools. The earlier Python/Gemini source remains an alternative. The core job, evidence rules, read-only behavior, and human-review boundary are preserved.</p>
+<div class="callout"><strong>Documented deviation:</strong> the workflow uses a ChatGPT skill rather than a separately configured Custom GPT; the task is preserved.</div>
 </section>
 
 <section>
@@ -56,24 +56,20 @@
 <section>
 <h2>6. Build artifacts</h2>
 <ul>
-<li><a href="https://github.com/Eseixas89/ai-evaluation-portfolio/tree/main/fl-07-agent">FL-07 source folder</a></li>
-<li><a href="https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/fl-07-agent/BUILD_LOG.md">Build log</a></li>
-<li><a href="https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/fl-07-agent/EVALS.md">Evaluation cases</a></li>
-<li><a href="https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/fl-07-agent/SUBMISSION.md">Submission / raw recording checklist</a></li>
+<li><a href="https://github.com/Eseixas89/ai-evaluation-portfolio/tree/main/fl-07-chatgpt">FL-07 source folder</a></li>
+<li><a href="https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/fl-07-chatgpt/BUILD_LOG.md">Build log</a></li>
+<li><a href="https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/fl-07-chatgpt/EVAL_RESULTS.md">Observed evaluations and remaining checks</a></li>
+<li><a href="https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/fl-07-chatgpt/DEMO.md">Submission / raw recording checklist</a></li>
 <li><a href="personal-agent-spec.html">FL-06 specification</a></li>
 </ul>
 </section>
 
 <section>
 <h2>7. Reproduce the run</h2>
-<div class="code">cd fl-07-agent
-python -m venv .venv
-# activate the environment
-pip install -r requirements.txt
-# set GEMINI_API_KEY in the environment
-python agent.py --check
-python agent.py</div>
-<p class="small" style="margin-top:10px">The API key is intentionally never stored in the repository.</p>
+<div class="code">Select AI Evaluation Research Scout in ChatGPT.
+
+Prepare a brief on developments in agent evaluation and reliability over the past 30 days. Use primary sources, compare them with my GitHub portfolio, and include uncertainty and an observed run log.</div>
+<p class="small" style="margin-top:10px">This instruction-based workflow uses ChatGPT’s existing tools; no external model API key is required. If skill selection is unavailable, use the complete INSTRUCTIONS.md in a session with the required tools.</p>
 </section>
 
 <footer>Eduardo Seixas · Build the Agent · FlyRank Week 5</footer>
