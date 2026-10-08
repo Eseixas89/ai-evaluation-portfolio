@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="An accessible explanation of DNS, CNAME records, HTTPS, and this GitHub Pages portfolio."><title>DNS: From Address to Page | Eduardo Seixas</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"></head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="./"><span class="monogram" aria-hidden="true">ES</span>Eduardo Seixas</a><nav aria-label="Page navigation"><a href="./">Back to portfolio ↗</a></nav></div></header>
+<main id="main" class="article">
+<p class="eyebrow">Learning note / Website infrastructure</p>
+<h1>From a web address<br>to a working page.</h1>
+<p class="article-intro">A website address is easy for a person to remember. DNS helps a computer find the server that can answer it.</p>
+<h2>What DNS does</h2>
+<p>DNS, the Domain Name System, connects a hostname such as <code>eseixas89.github.io</code> with information needed to reach its service. An A record contains an IPv4 address; an AAAA record contains an IPv6 address. DNS handles the hostname, not the complete URL: <code>/ai-evaluation-portfolio/</code> is a path that the web server handles later.</p>
+<h2>What happens after someone types the address</h2>
+<p>The browser and operating system may already have a cached DNS answer. Otherwise, they ask a recursive resolver, usually supplied by a network provider or a selected DNS service. If the resolver has no usable cached answer, it follows the DNS hierarchy: root nameservers point it toward the relevant top-level domain; those nameservers point it toward the hostname's authoritative nameservers.</p>
+<p>The authoritative nameserver supplies the relevant DNS records. The resolver follows aliases if necessary, returns the address information to the client, and caches it for the time allowed by the record's TTL. Cached information means many visits can skip parts of this lookup. A nameserver answers DNS questions; it does not usually send the website itself.</p>
+<h2>Where HTTPS and the website response fit</h2>
+<p>After finding an address, the browser can establish a secure HTTPS connection to the host. TLS checks the server certificate for the hostname and encrypts traffic. The browser then requests the URL's path. GitHub Pages serves this portfolio's <code>index.html</code>; the browser reads it and requests the stylesheet and any other resources needed to display the page.</p>
+<p>DNS resolution and HTTPS do different jobs: DNS helps locate the service, while HTTPS protects the connection. A successful DNS lookup alone does not prove that a certificate is valid or that the page exists.</p>
+<h2>What a CNAME record means</h2>
+<p>A CNAME makes one hostname an alias of another hostname. For a future custom subdomain, an illustrative DNS configuration would be <code>www.example.com → eseixas89.github.io</code>. The target is a hostname, without <code>https://</code> or a repository path. The resolver follows the target to find address records; this is not an HTTP redirect and does not itself change the address shown in the browser.</p>
+<p>Connecting a custom domain also requires configuration in the hosting service and a valid HTTPS certificate. A CNAME alone is insufficient. This portfolio currently uses GitHub's default domain, so no purchased domain or custom DNS setup is required.</p>
+<div class="article-callout"><strong>This portfolio's address</strong><br><a href="https://eseixas89.github.io/ai-evaluation-portfolio/">https://eseixas89.github.io/ai-evaluation-portfolio/</a><br>The hostname identifies the host; the repository path identifies this project site.</div>
+<h2>Primary references</h2>
+<ul class="source-list"><li><a href="https://www.cloudflare.com/learning/dns/what-is-dns/">Cloudflare: What is DNS?</a></li><li><a href="https://www.cloudflare.com/learning/dns/dns-records/dns-cname-record/">Cloudflare: What is a CNAME record?</a></li><li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages">GitHub: What is GitHub Pages?</a></li><li><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https">GitHub: Securing your site with HTTPS</a></li></ul>
+</main><footer class="container site-footer"><p>Eduardo Seixas · Learning in public</p><a href="./">Return to portfolio ↗</a></footer>
+</body></html>
