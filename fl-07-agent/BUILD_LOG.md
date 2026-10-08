@@ -81,3 +81,27 @@ They do not improve the FL-07 pass criteria enough to justify the added failure 
 ## Live verification still required for submission
 
 The final reviewer-facing proof is one raw run with a real `GEMINI_API_KEY` and internet access. That run should show the GitHub context load, Google Search-grounded model call, and final Markdown result without intervention. The recording belongs in the submission; it should not be fabricated or edited retroactively.
+
+## Iteration 5 — Resuming the build, 2026-10-08
+
+Re-read the committed FL-06 specification and confirmed that the original job is the **AI Evaluation Research Scout**. A proposed vacancy-analysis agent was not adopted for this submission.
+
+Issues found and changes made:
+
+- The HTML extractor included page metadata, CSS, and scripts in model context. These are now excluded while visible portfolio text is retained.
+- There was no quick setup check. Added `python agent.py --check` to inspect Python, SDK installation, key presence, and the four live GitHub reads without calling Gemini.
+- The report said Search was enabled, but did not check whether it was actually used. The program now requires observed `google_search_call` and `google_search_result` steps; absent search traces fail with exit code 7. Exposed query text is included in the saved report.
+- Missing citation annotations now produce an explicit review warning instead of implying that model-written URLs are sufficient verification.
+- The client now uses the explicitly configured `GEMINI_API_KEY`, and client-initialization errors are handled together with API errors.
+- The portfolio summary now accurately states that end-to-end verification and recording remain pending.
+
+Verification performed in this iteration:
+
+- Installed `google-genai` 2.29.0 in an isolated Python 3.12.14 environment.
+- All four actual GitHub reads succeeded in `--check`.
+- Six local regression tests passed. Fixtures cover HTML cleaning, duplicate citations, completed and incomplete search traces, text-only responses, and missing-citation warnings. They are not live model evaluations.
+- CLI help and missing-key behavior worked; the preflight correctly returned exit code 2 because `GEMINI_API_KEY` is absent.
+- SDK client construction exposed the Interactions API without sending a model request. This workspace needed the optional `httpx[socks]` transport dependency for its configured proxy; it was installed locally for this check.
+- `git diff --check` passed.
+
+Remaining work: configure a real key locally, complete a grounded Gemini run, review the brief against `EVALS.md`, and record the unedited end-to-end demonstration. No claim is made that these remaining steps have passed.

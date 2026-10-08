@@ -9,6 +9,7 @@ It is intentionally read-only and bounded to the FL-06 scope.
 from __future__ import annotations
 
 import argparse
+import importlib.metadata
 import os
 import sys
 import textwrap
@@ -46,10 +47,19 @@ class _TextExtractor(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
         self.parts: list[str] = []
+        self.ignored_depth = 0
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag in {"head", "style", "script"}:
+            self.ignored_depth += 1
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag in {"head", "style", "script"}:
+            self.ignored_depth = max(0, self.ignored_depth - 1)
 
     def handle_data(self, data: str) -> None:
         text = " ".join(data.split())
-        if text:
+        if text and not self.ignored_depth:
             self.parts.append(text)
 
     def text(self) -> str:
@@ -185,17 +195,40 @@ def collect_citations(interaction: object) -> list[tuple[str, str]]:
     return found
 
 
+def collect_search_evidence(interaction: object) -> tuple[list[str], int, int]:
+    """Read observed Google Search steps; enabling a tool is not proof of use."""
+    queries: list[str] = []
+    calls = 0
+    results = 0
+    for step in getattr(interaction, "steps", []) or []:
+        if getattr(step, "type", None) == "google_search_call":
+            calls += 1
+            arguments = getattr(step, "arguments", None)
+            values = (
+                arguments.get("queries", [])
+                if isinstance(arguments, dict)
+                else getattr(arguments, "queries", [])
+            )
+            for query in values or []:
+                if query and query not in queries:
+                    queries.append(str(query))
+        elif getattr(step, "type", None) == "google_search_result":
+            results += 1
+    return queries, calls, results
+
+
 def render_output(
     brief: str,
     citations: Iterable[tuple[str, str]],
     run_log: Iterable[str],
     model: str,
+    search_queries: Iterable[str],
 ) -> str:
     citation_lines = [f"- [{title}]({url})" for title, url in citations]
     if not citation_lines:
         citation_lines = [
-            "- Citations are expected inline in the grounded brief; no separate "
-            "annotation URLs were exposed by this SDK response."
+            "- REVIEW REQUIRED: the API exposed no citation annotations. "
+            "Do not treat model-written URLs as verified grounding citations."
         ]
 
     return (
@@ -204,7 +237,11 @@ def render_output(
         f"Generated: `{datetime.now(timezone.utc).isoformat()}`\n\n"
         "## Live connection log\n"
         + "\n".join(f"- {line}" for line in run_log)
-        + "\n- OK  Google Search grounding: enabled\n\n"
+        + "\n- OK  Google Search call and result steps observed\n\n"
+        + "## Search queries exposed by the API\n"
+        + ("\n".join(f"- {query}" for query in search_queries)
+           or "- The API returned search steps without query text.")
+        + "\n\n"
         + brief.strip()
         + "\n\n## Grounding citations exposed by the API\n"
         + "\n".join(citation_lines)
@@ -214,6 +251,11 @@ def render_output(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Run the FL-07 research scout.")
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="Check Python, SDK, key presence, and live GitHub reads without calling Gemini.",
+    )
     parser.add_argument(
         "--prompt",
         default=DEFAULT_PROMPT,
@@ -232,8 +274,43 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def check_setup() -> int:
+    """Check readiness without displaying secrets or making a model request."""
+    ready = True
+    print(f"Python: {sys.version.split()[0]}")
+    if sys.version_info < (3, 10):
+        print("ERROR: Python 3.10 or newer is required.")
+        ready = False
+    try:
+        from google import genai  # noqa: F401
+        print(f"OK  google-genai: {importlib.metadata.version('google-genai')}")
+    except (ImportError, importlib.metadata.PackageNotFoundError):
+        print("ERROR: Install the SDK with: python -m pip install -r requirements.txt")
+        ready = False
+    if os.getenv("GEMINI_API_KEY"):
+        print("OK  GEMINI_API_KEY is set (value hidden; validity not tested).")
+    else:
+        print("MISSING: GEMINI_API_KEY. Configure it locally before the real run.")
+        ready = False
+    print("Checking live GitHub portfolio reads...")
+    try:
+        _, connection_log = load_portfolio_context()
+        for line in connection_log:
+            print(line)
+            if line.startswith("WARN"):
+                ready = False
+    except RuntimeError as exc:
+        print(f"ERROR: {exc}")
+        ready = False
+    print("No Gemini request was made. End-to-end verification is still required.")
+    return 0 if ready else 2
+
+
 def main() -> int:
     args = parse_args()
+
+    if args.check:
+        return check_setup()
 
     if not os.getenv("GEMINI_API_KEY"):
         print(
@@ -260,12 +337,13 @@ def main() -> int:
         )
         return 6
 
-    client = genai.Client()
-
     print("[1/3] Live GitHub portfolio context loaded.")
+    for line in connection_log:
+        print(line)
     print(f"[2/3] Running {args.model} with Google Search grounding...")
 
     try:
+        client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
         interaction = client.interactions.create(
             model=args.model,
             input=prompt,
@@ -281,7 +359,19 @@ def main() -> int:
         return 5
 
     citations = collect_citations(interaction)
-    rendered = render_output(brief, citations, connection_log, args.model)
+    queries, search_calls, search_results = collect_search_evidence(interaction)
+    if not search_calls or not search_results:
+        print(
+            "ERROR: The response contains no completed Google Search trace. "
+            "The research run cannot be marked successful.",
+            file=sys.stderr,
+        )
+        return 7
+    print(f"Google Search observed: {search_calls} calls, {search_results} results, "
+          f"{len(citations)} citation URLs.")
+    if not citations:
+        print("WARN: No grounding citations were exposed; review the brief before submission.")
+    rendered = render_output(brief, citations, connection_log, args.model, queries)
 
     output_path = Path(args.output)
     output_path.parent.mkdir(parents=True, exist_ok=True)
