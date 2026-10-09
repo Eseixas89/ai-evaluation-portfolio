@@ -11,7 +11,7 @@ HTML organiza o conteúdo: títulos, parágrafos, seções e links. CSS determin
 | `index.html` | Página inicial: apresentação, projetos, competências, experiência e contato. |
 | `styles.css` | Aparência da página inicial e da nota de DNS. As regras `@media` ajustam a página para celular, impressão e preferência por movimento reduzido. |
 | `favicon.svg` | Ícone circular com ES na aba do navegador. |
-| `assets/Eduardo_Seixas_CV.pdf` | Cópia do currículo em inglês que tu enviaste. O botão de download aponta para esse arquivo. |
+| `assets/Eduardo_Seixas_CV.pdf` | Currículo em inglês com o endereço clicável do portfólio. O botão de download aponta para esse arquivo. |
 | `dns-walkthrough.html` | Explicação de como o endereço se transforma em acesso ao site. |
 | `.nojekyll` | Indica que os arquivos serão publicados diretamente, sem o gerador Jekyll. |
 | `.github/workflows/pages.yml` | Publicação automática: obtém os arquivos do repositório, prepara o Pages, envia os arquivos e publica. |
@@ -28,7 +28,7 @@ As páginas de projetos já existentes continuam disponíveis. O diretório `fl-
 
 `href="https://github.com/Eseixas89"` abre um endereço externo.
 
-`href="mailto:..."` solicita ao dispositivo que abra o aplicativo de e-mail configurado. O botão de conversa já prepara assunto e texto, mas ninguém recebe uma mensagem até o visitante enviá-la. Ele não marca automaticamente um horário.
+O botão de conversa abre teu Calendly de 30 minutos: https://calendly.com/eduardosseixas89/30min. O visitante escolhe um horário disponível nessa página. O link de e-mail, separado, usa `href="mailto:..."` para abrir o aplicativo de e-mail configurado.
 
 O atributo `download` no link do currículo pede ao navegador para baixar o PDF. O link de leitura abre o mesmo arquivo sem essa indicação.
 
@@ -50,12 +50,12 @@ Para visualizar no teu computador, com Python instalado, executa `python -m http
 
 Uma explicação que podes praticar e adaptar com tuas palavras:
 
-“Usei HTML para organizar o conteúdo do portfólio e CSS para a aparência e adaptação ao celular. Os arquivos estão no meu GitHub. O GitHub Actions envia os arquivos para o GitHub Pages quando a branch principal recebe uma alteração. O site usa HTTPS e o domínio gratuito do GitHub. As páginas mostram minha experiência e links para trabalhos verificáveis. Não há banco de dados nem formulário com servidor; o contato funciona por e-mail. Usei assistência de IA na construção e revisei o conteúdo e o funcionamento.”
+“Usei HTML para organizar o conteúdo do portfólio e CSS para a aparência e adaptação ao celular. Os arquivos estão no meu GitHub. O GitHub Actions envia os arquivos para o GitHub Pages quando a branch principal recebe uma alteração. O site usa HTTPS e o domínio gratuito do GitHub. As páginas mostram minha experiência e links para trabalhos verificáveis. Não há banco de dados nem formulário com servidor; o contato funciona por e-mail e o agendamento abre o Calendly. Usei assistência de IA na construção e revisei o conteúdo e o funcionamento.”
 
 ## Para concluir a tarefa da FlyRank
 
 - Usa o endereço público do site em Deliverable links.
 - A nota de DNS está em https://eseixas89.github.io/ai-evaluation-portfolio/dns-walkthrough.html. Lê, entende e reescreve com tuas palavras antes de entregar; a tarefa pede autoria pessoal.
-- O contato atual usa e-mail, como tu escolheste. Se exigirem um calendário, cria um link de agendamento e substitui o `mailto` do botão de conversa.
-- Acrescenta o endereço do portfólio ao teu LinkedIn e ao currículo. A cópia atual do PDF não foi modificada.
+- O botão de agendamento já aponta para teu Calendly de 30 minutos. Confere se há horários disponíveis.
+- O endereço do portfólio já foi acrescentado ao LinkedIn e ao currículo disponível no site.
 - Quando aprovarem teu capstone e fornecerem o selo oficial, acrescenta o arquivo do selo e uma imagem na página.

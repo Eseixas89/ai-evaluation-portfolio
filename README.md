@@ -33,7 +33,7 @@ Edit content in `index.html` and presentation in `styles.css`. Committing to `ma
 
 ## Contact and submission notes
 
-The introductory-call button opens an email request. It does **not** reserve a calendar time; replace it with a real scheduling URL if required by a reviewer.
+The introductory-call button links to Eduardo's 30-minute Calendly event: https://calendly.com/eduardosseixas89/30min. Email is available separately.
 
 The DNS learning note was prepared with AI assistance. Before submitting it as an assignment requiring your own words, review it, explain the process yourself, and revise its wording accordingly.
 
