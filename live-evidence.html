@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Inspect live source files behind Eduardo Seixas's AI evaluation projects, retrieved from the public GitHub API.">
+<meta name="theme-color" content="#173b35">
+<title>Live project evidence | Eduardo Seixas</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="live-evidence.css">
+<script src="live-evidence.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="container header-inner"><a class="brand" href="./"><span class="monogram" aria-hidden="true">ES</span>Eduardo Seixas</a><nav aria-label="Main navigation"><a href="./#work">Work</a><a href="#how-it-works">How it works</a><a href="./#contact">Contact ↗</a></nav></div></header>
+<main id="main" class="container evidence-main">
+<p class="eyebrow">Working demo / GitHub integration</p>
+<h1>Inspect the work.<br><em>Follow the evidence.</em></h1>
+<p class="evidence-intro">Choose a project to find its source files in a live snapshot of my public repository. Open a file to inspect the exact version behind the result.</p>
+<section class="evidence-panel" aria-labelledby="explorer-title">
+<div class="evidence-panel-top"><h2 id="explorer-title">Live project evidence</h2><span class="tag">Read-only · Public data</span></div>
+<form id="evidence-form">
+<div class="evidence-field"><label for="project">Project</label><select id="project" name="project"><option value="scout">AI Evaluation Research Scout</option><option value="workflow">Source-grounded research workflow</option><option value="connectors">Connectors and agent concepts</option></select></div>
+<button class="button" type="submit" id="load-evidence">Load live evidence ↗</button>
+</form>
+<p class="evidence-help">This requests public repository data from GitHub. No account or API key needed. A snapshot is reused for up to five minutes in this tab.</p>
+<p id="evidence-status" class="evidence-status" role="status" aria-live="polite" aria-atomic="true">Ready. Choose a project, then load its evidence.</p>
+<noscript><p>JavaScript is needed for the live lookup. You can still <a href="https://github.com/Eseixas89/ai-evaluation-portfolio">inspect the repository on GitHub</a>.</p></noscript>
+<div id="evidence-results" hidden aria-busy="false">
+<h3 id="result-title"></h3><p id="result-description"></p>
+<dl class="snapshot-meta"><div><dt>Fetched from GitHub</dt><dd id="fetched-at"></dd></div><div><dt>Repository snapshot</dt><dd id="snapshot-commit"></dd></div></dl>
+<p class="evidence-help">The commit identifies the whole repository snapshot; it is not the last change date of every file. File presence is evidence of available artifacts, not proof that a project passes its evaluations.</p>
+<ul id="evidence-files" class="evidence-files" aria-label="Project evidence files"></ul>
+</div>
+<p class="evidence-fallback">Prefer to browse directly? <a href="https://github.com/Eseixas89/ai-evaluation-portfolio">Open the public repository ↗</a></p>
+</section>
+<section id="how-it-works" class="evidence-explainer" aria-labelledby="flow-title">
+<p class="eyebrow">Behind this feature</p><h2 id="flow-title">What happens after the click?</h2>
+<p>A backend is the part of a service that runs on a server and responds to requests. GitHub Pages serves this portfolio's HTML, CSS, and JavaScript. It does not run a custom application backend here. This feature uses GitHub's existing API as its external backend.</p>
+<ol><li>You choose a project and press <strong>Load live evidence</strong>.</li><li>The JavaScript in your browser asks the GitHub API for the current commit on <code>main</code>, then requests the file tree at that exact commit. Both responses are JSON: structured text the page can read.</li><li>The browser selects the files belonging to that project and displays their paths, sizes, and links. Each link points to the same commit, so the evidence stays traceable even if the repository changes later.</li></ol>
+<p>There is no AI model call, database, contact submission, or private credential in this demo. It sends two read-only requests to GitHub for a fresh snapshot and keeps that snapshot in this tab's memory for five minutes. GitHub receives ordinary web-request information such as the visitor's IP address. Nothing is saved by this page after the tab is closed.</p>
+<p>The portfolio is hosted on GitHub Pages using a public repository, and the API reads public data without a paid service or key. Unauthenticated API requests are generally limited to 60 per hour per IP address. If GitHub is unavailable, a request times out, or the limit is reached, the page displays an error and keeps a direct repository link available.</p>
+<details lang="pt-BR"><summary>Explicação em português</summary><p>Backend é a parte de um serviço que funciona no servidor e responde às solicitações. Neste projeto, o GitHub Pages entrega a página e a API do GitHub fornece os dados. Não existe um servidor próprio executando Python ou um modelo de IA.</p><p>Ao escolher um projeto e clicar no botão, o navegador busca o commit atual e a lista de arquivos daquele commit. O JavaScript filtra os arquivos do projeto e mostra os links para aquela versão. São duas consultas de leitura. O resultado fica na memória da aba por cinco minutos para reduzir consultas repetidas. Se a consulta falhar, aparece uma mensagem com acesso direto ao repositório.</p><p>A função demonstra uma consulta real a um serviço externo. Ela não avalia automaticamente a qualidade dos projetos; permite que o visitante inspecione as evidências.</p></details>
+<p class="evidence-help">References: <a href="https://docs.github.com/en/rest/commits/commits#get-a-commit">Commit API</a> · <a href="https://docs.github.com/en/rest/git/trees#get-a-tree">Tree API</a> · <a href="https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api">API limits</a> · <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages">GitHub Pages</a></p>
+</section>
+</main>
+<footer class="container site-footer"><p>© 2026 Eduardo Seixas</p><a href="https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/live-evidence.js">Inspect this feature's source ↗</a><a href="./">Back to portfolio ↑</a></footer>
+</body></html>

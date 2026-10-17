@@ -38,3 +38,10 @@ The introductory-call button links to Eduardo's 30-minute Calendly event: https:
 The DNS learning note was prepared with AI assistance. Before submitting it as an assignment requiring your own words, review it, explain the process yourself, and revise its wording accordingly.
 
 The supplied CV is unchanged. Add the live portfolio link to the CV and LinkedIn before marking that part of the assignment complete. Add the official FlyRank badge after it is issued following capstone approval.
+
+
+## Live project evidence
+
+[Try the working demo](https://eseixas89.github.io/ai-evaluation-portfolio/live-evidence.html). One dynamic feature retrieves the current public repository commit and its file tree from GitHub, then shows the selected project's evidence files with links pinned to that commit. No API key or model call is required. The page includes an English backend/data-flow explanation and a Portuguese explanation.
+
+Implementation: `live-evidence.html`, `live-evidence.css`, `live-evidence.js`.
