@@ -1,0 +1,257 @@
+{
+  "checkedAt": "2026-10-17T19:21:16.184604+00:00",
+  "method": "Public HTTPS GET with normal certificate verification; deployed HTML metadata inspected",
+  "finalUrl": "https://eseixas89.github.io/ai-evaluation-portfolio/",
+  "addressChoice": "Existing free GitHub Pages subdomain retained under the portal Q&A fallback; no paid custom domain or DNS change made.",
+  "pages": [
+    {
+      "path": "404.html",
+      "status": 200,
+      "tlsVerificationResult": 0,
+      "url": "https://eseixas89.github.io/ai-evaluation-portfolio/404.html",
+      "title": "Page not found | Eduardo Seixas",
+      "description": "Return to Eduardo Seixas's portfolio or inspect the public project evidence.",
+      "canonical": null,
+      "ogImage": null,
+      "twitterCard": null,
+      "favicon": "https://eseixas89.github.io/ai-evaluation-portfolio/favicon.svg",
+      "mixedContentResources": [],
+      "analyticsScripts": [],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "agent-concepts-mcp-basics.html",
+      "status": 200,
+      "tlsVerificationResult": 0,
+      "url": "https://eseixas89.github.io/ai-evaluation-portfolio/agent-concepts-mcp-basics.html",
+      "title": "Agent Concepts and MCP Basics \u2014 Eduardo Seixas",
+      "description": "Agent concepts, MCP basics, and GitHub connector evidence for Eduardo Seixas's FlyRank Week 4 assignment.",
+      "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/agent-concepts-mcp-basics.html",
+      "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+      "twitterCard": "summary_large_image",
+      "favicon": null,
+      "mixedContentResources": [],
+      "analyticsScripts": [],
+      "failures": [
+        "Missing title, description or favicon"
+      ],
+      "passed": false
+    },
+    {
+      "path": "automation-workflow-v2.html",
+      "status": 200,
+      "tlsVerificationResult": 0,
+      "url": "https://eseixas89.github.io/ai-evaluation-portfolio/automation-workflow-v2.html",
+      "title": "Ship an Automation Workflow v2 \u2014 Eduardo Seixas",
+      "description": "FlyRank Week 4 automation workflow walkthrough by Eduardo Seixas.",
+      "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/automation-workflow-v2.html",
+      "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+      "twitterCard": "summary_large_image",
+      "favicon": null,
+      "mixedContentResources": [],
+      "analyticsScripts": [],
+      "failures": [
+        "Missing title, description or favicon"
+      ],
+      "passed": false
+    },
+    {
+      "path": "build-the-agent.html",
+      "status": 200,
+      "tlsVerificationResult": 0,
+      "url": "https://eseixas89.github.io/ai-evaluation-portfolio/build-the-agent.html",
+      "title": "Build the Agent \u2014 Eduardo Seixas",
+      "description": "FlyRank FL-07 Build the Agent submission for Eduardo Seixas.",
+      "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/build-the-agent.html",
+      "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+      "twitterCard": "summary_large_image",
+      "favicon": null,
+      "mixedContentResources": [],
+      "analyticsScripts": [],
+      "failures": [
+        "Missing title, description or favicon"
+      ],
+      "passed": false
+    },
+    {
+      "path": "critique-response.html",
+      "status": 200,
+      "tlsVerificationResult": 0,
+      "url": "https://eseixas89.github.io/ai-evaluation-portfolio/critique-response.html",
+      "title": "Peer review and changes | Eduardo Seixas",
+      "description": "Peer feedback, must-fix priorities, and evidence of changes to Eduardo Seixas's AI evaluation portfolio.",
+      "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/critique-response.html",
+      "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+      "twitterCard": "summary_large_image",
+      "favicon": "favicon.svg",
+      "mixedContentResources": [],
+      "analyticsScripts": [],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "dns-walkthrough.html",
+      "status": 200,
+      "tlsVerificationResult": 0,
+      "url": "https://eseixas89.github.io/ai-evaluation-portfolio/dns-walkthrough.html",
+      "title": "Como o DNS funciona | Eduardo Seixas",
+      "description": "Uma explica\u00e7\u00e3o de DNS, resolver, nameservers, CNAME e HTTPS usando este portf\u00f3lio como exemplo.",
+      "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/dns-walkthrough.html",
+      "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+      "twitterCard": "summary_large_image",
+      "favicon": "favicon.svg",
+      "mixedContentResources": [],
+      "analyticsScripts": [],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "explain-it-like-you-built-it.html",
+      "status": 200,
+      "tlsVerificationResult": 0,
+      "url": "https://eseixas89.github.io/ai-evaluation-portfolio/explain-it-like-you-built-it.html",
+      "title": "Explain It Like You Built It \u2014 Eduardo Seixas",
+      "description": "Week 5 Explain It Like You Built It submission.",
+      "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/explain-it-like-you-built-it.html",
+      "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+      "twitterCard": "summary_large_image",
+      "favicon": null,
+      "mixedContentResources": [],
+      "analyticsScripts": [],
+      "failures": [
+        "Missing title, description or favicon"
+      ],
+      "passed": false
+    },
+    {
+      "path": "hardening-review.html",
+      "status": 200,
+      "tlsVerificationResult": 0,
+      "url": "https://eseixas89.github.io/ai-evaluation-portfolio/hardening-review.html",
+      "title": "Hardening review: fixes and limits | Eduardo Seixas",
+      "description": "Break Your Own Site: reproduced failures, fixes, browser tests, PageSpeed results, SEO checks, and known limitations for Eduardo Seixas's portfolio.",
+      "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/hardening-review.html",
+      "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+      "twitterCard": "summary_large_image",
+      "favicon": "favicon.svg",
+      "mixedContentResources": [],
+      "analyticsScripts": [],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "tlsVerificationResult": 0,
+      "url": "https://eseixas89.github.io/ai-evaluation-portfolio/index.html",
+      "title": "Eduardo Seixas | AI Evaluation & Applied Research",
+      "description": "Eduardo Seixas: AI evaluation, data quality, science education, and applied research. Explore projects, experience, and evidence.",
+      "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/",
+      "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+      "twitterCard": "summary_large_image",
+      "favicon": "favicon.svg",
+      "mixedContentResources": [],
+      "analyticsScripts": [],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "live-evidence.html",
+      "status": 200,
+      "tlsVerificationResult": 0,
+      "url": "https://eseixas89.github.io/ai-evaluation-portfolio/live-evidence.html",
+      "title": "Live project evidence | Eduardo Seixas",
+      "description": "Inspect live source files behind Eduardo Seixas's AI evaluation projects, retrieved from the public GitHub API.",
+      "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/live-evidence.html",
+      "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+      "twitterCard": "summary_large_image",
+      "favicon": "favicon.svg",
+      "mixedContentResources": [],
+      "analyticsScripts": [],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "mobile-fix-log.html",
+      "status": 200,
+      "tlsVerificationResult": 0,
+      "url": "https://eseixas89.github.io/ai-evaluation-portfolio/mobile-fix-log.html",
+      "title": "Mobile fixes and verification | Eduardo Seixas",
+      "description": "Before-and-after mobile, readability, accessibility, and link audit for Eduardo Seixas's portfolio, with physical-phone verification status.",
+      "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/mobile-fix-log.html",
+      "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+      "twitterCard": "summary_large_image",
+      "favicon": "favicon.svg",
+      "mixedContentResources": [],
+      "analyticsScripts": [],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "personal-agent-spec.html",
+      "status": 200,
+      "tlsVerificationResult": 0,
+      "url": "https://eseixas89.github.io/ai-evaluation-portfolio/personal-agent-spec.html",
+      "title": "Design Your Personal Agent \u2014 Eduardo Seixas",
+      "description": "Week 5 Design Your Personal Agent submission for Eduardo Seixas.",
+      "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/personal-agent-spec.html",
+      "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+      "twitterCard": "summary_large_image",
+      "favicon": null,
+      "mixedContentResources": [],
+      "analyticsScripts": [],
+      "failures": [
+        "Missing title, description or favicon"
+      ],
+      "passed": false
+    },
+    {
+      "path": "stack-rationale.html",
+      "status": 200,
+      "tlsVerificationResult": 0,
+      "url": "https://eseixas89.github.io/ai-evaluation-portfolio/stack-rationale.html",
+      "title": "Three Roads: Choose Your Stack with AI \u2014 Eduardo Seixas",
+      "description": "Week 4 stack rationale for Eduardo Seixas's AI Evaluation portfolio.",
+      "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/stack-rationale.html",
+      "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+      "twitterCard": "summary_large_image",
+      "favicon": null,
+      "mixedContentResources": [],
+      "analyticsScripts": [],
+      "failures": [
+        "Missing title, description or favicon"
+      ],
+      "passed": false
+    }
+  ],
+  "favicon": {
+    "path": "favicon.svg",
+    "status": 200,
+    "tlsVerificationResult": 0,
+    "url": "https://eseixas89.github.io/ai-evaluation-portfolio/favicon.svg"
+  },
+  "socialPreview": {
+    "path": "assets/social-preview.png",
+    "status": 200,
+    "tlsVerificationResult": 0,
+    "url": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+    "width": 1200,
+    "height": 630
+  },
+  "analytics": {
+    "status": "not installed",
+    "reason": "A registered site and its public installation snippet are still needed."
+  },
+  "badge": {
+    "status": "awaiting issued credential details",
+    "reason": "No issued credential ID has been provided; issuance status has not been confirmed."
+  },
+  "physicalPhoneRecheck": {
+    "status": "pending",
+    "device": "Samsung A15",
+    "note": "Earlier testing is recorded separately; this assignment requests opening the address again."
+  },
+  "sharePreviewPlatformCheck": "Metadata and image delivery checked; platform-specific cache refresh not observed.",
+  "passedPublicChecks": false
+}

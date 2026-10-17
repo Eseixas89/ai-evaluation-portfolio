@@ -60,3 +60,7 @@ Implementation: `live-evidence.html`, `live-evidence.css`, `live-evidence.js`.
 ## Hardening: failure cases, SEO, and limits
 
 [Public hardening review](https://eseixas89.github.io/ai-evaluation-portfolio/hardening-review.html) records reproduced failures, fix-now changes, known limitations, the public PageSpeed run, and the required peer/mentor checklist. Twenty-three browser regression scenarios passed after the changes; thirteen pages passed sixty-five layout checks. Public deployment checks and real demo results are recorded separately from API fixtures. The owner relayed positive feedback from a friend on 17 October 2026: the site looked good and no issues were noticed. No new must-fix was reported; the reviewer's identity, device/browser, and individual checklist actions were not specified. See `tests/README.md` for reproduction commands and `assets/hardening/` for evidence.
+
+## Domain, analytics, and graduate badge
+
+[Launch setup record](https://eseixas89.github.io/ai-evaluation-portfolio/launch-readiness.html) retains the existing free GitHub Pages address under the portal's subdomain fallback. Public HTTPS, titles, favicon, and social metadata were checked. Analytics still needs the site's public installation snippet, the badge needs an issued credential ID, and a fresh owner phone check remains pending. See `LAUNCH_SETUP.md` for the exact handoff and `assets/launch/launch-checks.json` for observed checks. No analytics installation or graduate credential is claimed before those steps are verified.
