@@ -45,3 +45,8 @@ The supplied CV is unchanged. Add the live portfolio link to the CV and LinkedIn
 [Try the working demo](https://eseixas89.github.io/ai-evaluation-portfolio/live-evidence.html). One dynamic feature retrieves the current public repository commit and its file tree from GitHub, then shows the selected project's evidence files with links pinned to that commit. No API key or model call is required. The page includes an English backend/data-flow explanation and a Portuguese explanation.
 
 Implementation: `live-evidence.html`, `live-evidence.css`, `live-evidence.js`.
+
+
+## Mobile, readability, and accessibility audit
+
+[Public before/after fix log](https://eseixas89.github.io/ai-evaluation-portfolio/mobile-fix-log.html). Shared fixes live in `accessibility.css`. Browser checks cover phone, tablet, and desktop widths, with screenshots explicitly labelled as emulated. **Physical-phone verification is still pending** and has a checklist in the log. See `mobile-audit-results.json` for the scoped machine-check summary.

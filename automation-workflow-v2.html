@@ -45,9 +45,12 @@ th{color:var(--primary)}
 footer{color:var(--muted);text-align:center;font-size:.84rem;margin-top:28px}
 @media(max-width:850px){.flow{grid-template-columns:1fr}.status{grid-template-columns:1fr}}
 </style>
+<link rel="stylesheet" href="accessibility.css">
 </head>
-<body>
-<main>
+<body class="legacy-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="page-return"><a href="./">← Back to portfolio</a></header>
+<main id="main">
   <p class="eyebrow">FlyRank · Week 4 · General AI Fluency</p>
   <h1>Ship an Automation Workflow v2</h1>
   <p class="lead">A no-code, source-grounded research workflow that turns a recurring AI-evaluation research task into a five-stage pipeline with explicit handoffs, source gating, human review, and a repeatable weekly schedule.</p>
@@ -170,8 +173,11 @@ footer{color:var(--muted);text-align:center;font-size:.84rem;margin-top:28px}
 
   <section>
     <h2>5. Time accounting</h2>
+    <p class="table-help" id="table-help">On a narrow screen, swipe the table sideways, or focus it and use the arrow keys.</p>
+    <div class="table-scroll" role="region" tabindex="0" aria-label="Workflow timing comparison" aria-describedby="table-help">
     <table>
-      <thead><tr><th>Item</th><th>Observed / estimated time</th><th>Notes</th></tr></thead>
+      <caption>Workflow timing: measured observations and estimates</caption>
+      <thead><tr><th scope="col">Item</th><th scope="col">Observed / estimated time</th><th scope="col">Notes</th></tr></thead>
       <tbody>
         <tr><td>Workflow setup + first validation pass</td><td>Measured in-session build time: ~2.7 minutes at this checkpoint</td><td>Includes automation creation, prompt design, and five research retrieval passes before final document production.</td></tr>
         <tr><td>Five validation research retrievals</td><td>6.2–9.4s each; mean 7.7s tool time</td><td>Observed search-tool latency only; not a claim about human reading/drafting time.</td></tr>
@@ -180,6 +186,7 @@ footer{color:var(--muted);text-align:center;font-size:.84rem;margin-top:28px}
         <tr><td>Expected recurring savings</td><td>Roughly 20–35 min per brief after setup</td><td>Depends on source complexity and how many items require human escalation.</td></tr>
       </tbody>
     </table>
+    </div>
     <p class="note"><strong>Why this is honest:</strong> I separate measured machine/tool latency from the estimated human baseline instead of presenting model runtime as if it were equivalent to human research time.</p>
   </section>
 

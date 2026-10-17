@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Before-and-after mobile, readability, accessibility, and link audit for Eduardo Seixas's portfolio, with physical-phone verification status.">
+<title>Mobile fixes and verification | Eduardo Seixas</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="accessibility.css">
+<style>
+.audit-report{width:min(960px,calc(100% - 40px));margin:44px auto 72px}.audit-report h1{font-size:clamp(2.4rem,6vw,4rem);margin:22px 0}.audit-report h2{font-size:2rem;margin:38px 0 18px}.audit-report h3{font-size:1.15rem;margin:22px 0 10px}.audit-report p,.audit-report li{max-width:76ch}.audit-report li{margin-block:10px}.audit-report code{font-size:.9em;overflow-wrap:anywhere}.audit-status{border-left:4px solid #8c6424;background:#fbf0da;padding:18px 22px;margin:24px 0}.audit-status p{margin:6px 0 0}.audit-gallery{display:grid;grid-template-columns:1fr 1fr;gap:24px}.audit-gallery figure{margin:0;min-width:0}.audit-gallery img{display:block;width:100%;max-width:390px;aspect-ratio:390/844;object-fit:contain;background:var(--soft);border:1px solid var(--line);border-radius:5px}.audit-gallery figcaption{font-size:.875rem;margin:10px 0 24px}.audit-report details{border-block:1px solid var(--line);margin-top:24px;padding:16px 0}.audit-report summary{display:flex;align-items:center;min-height:44px;cursor:pointer;font-weight:600}.audit-report pre{white-space:pre-wrap;overflow-wrap:anywhere;background:var(--soft);padding:18px;font-size:.875rem}.audit-report .small{font-size:.875rem;color:var(--muted)}@media(max-width:600px){.audit-gallery{grid-template-columns:1fr}.audit-report h2{font-size:1.7rem}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="page-return"><a href="./">← Back to portfolio</a></header>
+<main id="main" class="audit-report">
+<p class="eyebrow">Open It on Your Phone / Fix log / 17 October 2026</p>
+<h1>Readable. Tappable.<br>Checked across widths.</h1>
+<p>This log records real problems found in the portfolio, the fixes, and the checks performed with AI assistance. The screenshots below are browser captures at a <strong>390 × 844 CSS-pixel viewport</strong>; they are not photographs or screenshots from a physical phone.</p>
+<aside class="audit-status" aria-label="Verification status"><strong>Browser verification complete. Physical-phone verification pending.</strong><p>The assignment explicitly requires opening the site on a real phone. Device model, mobile browser, and the owner's result have not yet been supplied. This log does not claim that requirement is complete.</p></aside>
+<p><a href="./">Open the updated portfolio ↗</a> · <a href="live-evidence.html">Open the working demo ↗</a> · <a href="https://github.com/Eseixas89/ai-evaluation-portfolio">Open the repository ↗</a></p>
+<h2>What was broken, and what changed</h2>
+<ol>
+<li><strong>The timing table pushed the whole workflow page sideways.</strong> Before: document width exceeded a 320-pixel viewport by 106 pixels, and a 390-pixel viewport by 36 pixels. After: the table is inside its own labelled, keyboard-focusable scroll region, with a caption, column headers, and visible instructions. The page itself stays within the viewport.</li>
+<li><strong>Green labels had insufficient contrast on five project pages.</strong> The automated audit found 31 affected elements using the old accent, including a measured 3.94:1 ratio on the light page background. The accent was darkened from <code>#2b8a78</code> to <code>#176b5c</code>. The same automated checks then reported no remaining contrast violations on the audited pages.</li>
+<li><strong>Standalone navigation links were small touch targets.</strong> The main navigation and project links were about 20 pixels tall. They now have at least 44-pixel-high clickable areas, with wrapping instead of forcing a single row on narrow screens. The main call-to-action buttons stack on mobile.</li>
+<li><strong>Supporting text was too small for comfortable mobile reading.</strong> Project tags were about 9 pixels and some metadata about 10–11 pixels. Tags are now 12 pixels, supporting text generally 14–15 pixels, and project body text 16 pixels at the default root font size. Contact links stack their labels and destinations on mobile.</li>
+<li><strong>The publishing walkthrough had lost its reading layout.</strong> It still used <code>class="shell"</code>, which had no matching style. The content touched the screen edges. It now uses the shared article width, padding, and heading sizes.</li>
+<li><strong>Older project pages lacked an easy return path and skip link.</strong> A visible back-to-portfolio link, skip-to-main link, and consistent keyboard focus indicator were added. The hero also uses one column at intermediate tablet widths, and project detail labels have room to wrap without splitting short labels.</li>
+</ol>
+<h2>Before and after</h2>
+<p class="small">Same browser viewport for each pair. These are emulated mobile-width captures. The horizontally scrollable table is intentionally wider than its own region; it no longer widens the entire page.</p>
+<h3>Home: clearer navigation, larger metadata, stacked buttons</h3>
+<div class="audit-gallery"><figure><img src="assets/mobile-audit/index-before.jpg" width="390" height="844" loading="lazy" decoding="async" alt="Before: homepage at 390 pixels with small navigation and metadata, and two buttons on one row."><figcaption>Before — homepage.</figcaption></figure><figure><img src="assets/mobile-audit/index-after.jpg" width="390" height="844" loading="lazy" decoding="async" alt="After: homepage at 390 pixels with taller navigation targets, larger metadata, and full-width stacked buttons."><figcaption>After — homepage.</figcaption></figure></div>
+<h3>Workflow table: page overflow contained</h3>
+<div class="audit-gallery"><figure><img src="assets/mobile-audit/table-before.jpg" width="390" height="844" loading="lazy" decoding="async" alt="Before: the workflow table extends beyond the right edge of the mobile viewport."><figcaption>Before — table spills outside the page.</figcaption></figure><figure><img src="assets/mobile-audit/table-after.jpg" width="390" height="844" loading="lazy" decoding="async" alt="After: the table is inside a bordered scroll region with a visible sideways-scrolling instruction."><figcaption>After — table scrolls within its region.</figcaption></figure></div>
+<h3>Publishing walkthrough: restored reading margins</h3>
+<div class="audit-gallery"><figure><img src="assets/mobile-audit/walkthrough-before.jpg" width="390" height="844" loading="lazy" decoding="async" alt="Before: the publishing walkthrough text sits against the mobile screen edges."><figcaption>Before — unstyled shell layout.</figcaption></figure><figure><img src="assets/mobile-audit/walkthrough-after.jpg" width="390" height="844" loading="lazy" decoding="async" alt="After: the publishing walkthrough has readable margins and a visible back link."><figcaption>After — shared article layout.</figcaption></figure></div>
+<h2>Checks and their limits</h2>
+<ul>
+<li><strong>Reflow:</strong> all nine existing HTML pages checked at 320, 390, 768, 1024, and 1440 CSS pixels. After fixes, none caused document-level horizontal overflow. The new fix-log page is also checked at these widths.</li>
+<li><strong>Automated accessibility:</strong> axe-core checks at 390 pixels using WCAG 2 A/AA, 2.1 AA, and 2.2 AA tags. No violations were reported after the fixes. This is a scoped automated result, not a claim of full WCAG conformance.</li>
+<li><strong>Keyboard and enlarged text:</strong> the homepage skip link works; the table scrolls with arrow keys when focused; the homepage remains within the viewport when its root text size is doubled.</li>
+<li><strong>Demo interaction:</strong> touch emulation at 390 × 844 with a 2× pixel density verified the evidence button, displayed file links, and no result overflow using fixture API responses. The previous feature's real public GitHub API test is documented in <a href="make-it-do-something.md">its separate evidence log</a>.</li>
+<li><strong>Internal links:</strong> the 28 original local links and anchors resolved; all eight distinct internal project/article links were actually clicked in the browser. The CV download was checked against the source PDF. New return links and fix-log image paths were also checked.</li>
+<li><strong>External links:</strong> 38 of 39 distinct original HTTP(S) links returned HTTP 200 after redirects, including the repository, demo source, Calendly, and visual portfolio. LinkedIn returned HTTP 999 to the automated request and remains a manual check. An HTTP status checks reachability, not every destination's content or booking availability. The email link requires a configured email app and was not used to send a message.</li>
+<li><strong>Images and payload:</strong> the homepage uses a text/CSS monogram and an SVG favicon and has no raster work images to compress. Existing local assets were about 83 KB for the CV and 85 KB for the earlier evidence screenshot. This log uses compressed JPEG screenshots with explicit dimensions and lazy loading; screenshots are not loaded on the homepage.</li>
+</ul>
+<h2 id="phone-check">Finish the real-phone check</h2>
+<p>On a physical phone, open <a href="https://eseixas89.github.io/ai-evaluation-portfolio/">the live portfolio</a> and perform these checks before marking the assignment complete:</p>
+<ol>
+<li>Read the page in portrait and landscape. Confirm that text is comfortable, nothing is cut off, and the whole page does not slide sideways.</li>
+<li>Tap Work, About, Experience, and Contact. Open a project, return to the portfolio, and download or open the CV.</li>
+<li>Open the live evidence demo and tap Load live evidence. Confirm that file links appear, then select another project and test it again.</li>
+<li>Open the workflow's timing table and swipe sideways inside the table. The surrounding page should remain in place.</li>
+<li>Check LinkedIn and the visual portfolio. Confirm Calendly opens without making a booking, and the email link offers an email app without sending anything.</li>
+<li>Record the phone model, browser/version, date, issues found, and result. Add one phone screenshot to the submission if available.</li>
+</ol>
+<details lang="pt-BR"><summary>Roteiro curto em português</summary><p>Abre o portfólio no teu celular de verdade, lê em pé e deitado, testa o menu, o currículo, um projeto e a demonstração. Na página do workflow, arrasta a tabela para o lado: só a tabela deve deslizar. Confere também LinkedIn, Calendly e o link de e-mail. Depois registra o modelo do celular, navegador, data e se algo ficou cortado ou difícil de tocar. O teste em aparelho físico ainda está pendente neste registro.</p></details>
+<h2>Submission note after the phone check</h2>
+<p class="small">Draft for the portfolio owner to complete and adapt. Replace the bracketed fields only after a real test.</p>
+<pre>Updated portfolio and fix log: this page links to the live site and records the before/after fixes. I corrected a table overflowing on mobile, low-contrast labels, small navigation targets, small supporting text, and the publishing walkthrough's missing reading layout. Browser checks covered phone, tablet, and desktop widths. I also checked the live site on [phone model] using [browser/version] on [date]. Result: [what worked and any remaining issues].</pre>
+<p><a href="mobile-audit-results.json">Download the scoped audit results (JSON) ↗</a></p>
+<h2>References and implementation</h2>
+<p class="small"><a href="https://www.w3.org/WAI/WCAG22/Understanding/reflow.html">W3C: reflow</a> · <a href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html">W3C: contrast</a> · <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html">W3C: target size</a> · <a href="https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/accessibility.css">Shared accessibility styles</a></p>
+</main>
+<footer class="container site-footer"><p>© 2026 Eduardo Seixas</p><a href="./">Back to portfolio ↑</a></footer>
+</body></html>

@@ -1,0 +1,74 @@
+/* Shared reading, keyboard, and touch improvements across all portfolio pages. */
+body{overflow-wrap:anywhere}
+img,video,svg,iframe{max-width:100%}
+img,video{height:auto}
+a,button,input,select,textarea,summary{touch-action:manipulation}
+:is(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:3px solid #a47025;outline-offset:4px}
+.skip-link{position:absolute;top:-100px;left:16px;z-index:20;background:#173b35;color:#fff;padding:12px 18px}
+.skip-link:focus{top:12px}
+.page-return{max-width:1040px;margin:0 auto;padding:16px 24px 0}
+.page-return a{display:inline-flex;align-items:center;min-height:44px;font-size:1rem;color:#173b35}
+.legacy-page{--accent:#176b5c}
+.legacy-page :is(section,.grid,.card,.step,.status){min-width:0}
+.legacy-page :is(.prompt,.code,.output){overflow-wrap:anywhere;max-width:100%}
+.legacy-page :is(.eyebrow,.card b,.step b,.label,.badge){font-size:.8rem}
+.legacy-page :is(.small,footer){font-size:.9rem}
+.legacy-page footer a{display:inline-flex;align-items:center;min-height:44px}
+.table-scroll{max-width:100%;overflow-x:auto;overscroll-behavior-x:contain;border:1px solid var(--line);border-radius:8px}
+.table-scroll table{min-width:640px;margin-top:0}
+.table-scroll caption{text-align:left;padding:12px;font-weight:600;color:var(--primary)}
+.table-help{font-size:.9rem;color:var(--muted)}
+.table-scroll th[scope="col"]{background:var(--soft)}
+/* Navigation and standalone actions have generous targets; prose links remain inline. */
+.site-header nav{flex-wrap:wrap;gap:4px 14px}
+.site-header nav a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding-inline:8px;font-size:.9375rem}
+.brand{min-height:44px}
+.project-links{gap:8px 18px}
+.project-links a,.work-footnote a,.site-footer a{display:inline-flex;align-items:center;min-height:44px;font-size:.875rem;max-width:100%}
+a.text-link{display:inline-flex;align-items:center;min-height:44px;font-size:.9375rem}
+.note-link .text-link{font-size:.9375rem}
+.project-links a{padding-block:8px}
+.eyebrow,.hero .eyebrow,.tag{font-size:.75rem}
+.hero-meta{font-size:.875rem}
+.note-top{font-size:.75rem;flex-wrap:wrap}
+.note-intro,.note-bottom,.criteria p{font-size:.875rem}
+.criteria strong{font-size:1rem}
+.proof-grid span{font-size:.875rem}
+.project>p,.about-grid p,.expertise p,.timeline article p:last-child,.notes-section>div>p:last-child,.note-link p,.contact-section p{font-size:1rem}
+.project dl,.timeline-date,.timeline .organization,.education-note p,.work-footnote{font-size:.9375rem}
+.project dl div{grid-template-columns:80px minmax(0,1fr)}
+.contact-section .contact-small,.contact-links span,.site-footer{font-size:.875rem}
+.contact-links a{font-size:1rem}
+.article .source-list{font-size:.9375rem}
+.evidence-help,.evidence-explainer .evidence-help{font-size:.875rem}
+.evidence-field label,.evidence-files a,.snapshot-meta,.evidence-fallback{font-size:.9375rem}
+.evidence-field select{font-size:1rem}
+.evidence-files a{display:inline-flex;align-items:center;min-height:44px}
+.evidence-files li{padding-block:4px}
+.evidence-explainer summary{display:flex;align-items:center;min-height:44px}
+@media(max-width:720px){
+ .site-header .header-inner{padding-block:12px;gap:8px}
+ .site-header nav{gap:2px 4px}
+ .site-header nav a{font-size:.875rem;padding-inline:6px}
+ .hero .actions{display:grid;grid-template-columns:1fr}
+ .hero .actions .button{width:100%;font-size:.9375rem}
+ .hero h1{font-size:clamp(2.7rem,9.5vw,4rem)}
+ .project-top{align-items:flex-start}
+ .project-top .tag{text-align:right;max-width:80%}
+ .project dl div{display:block}
+ .project dt{margin-bottom:4px}
+ .contact-links a{align-items:flex-start;flex-direction:column;gap:3px}
+ .contact-links span{text-align:left}
+ .legacy-page main{padding:28px 16px 56px}
+ .legacy-page section{padding:20px}
+ .legacy-page :is(.card,.step){padding:16px}
+ .legacy-page :is(.pill,.tool){font-size:.875rem}
+ .legacy-page .tool{overflow-wrap:anywhere}
+ .evidence-main .snapshot-meta div{display:block;margin-top:14px}
+ .evidence-main .evidence-files li{align-items:flex-start;flex-direction:column;gap:0;padding-block:8px}
+}
+@media(min-width:721px) and (max-width:900px){
+ .hero{grid-template-columns:1fr;gap:38px}
+ .hero-note{max-width:520px;transform:none}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

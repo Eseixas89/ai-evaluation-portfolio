@@ -1,0 +1,323 @@
+{
+  "date": "2026-10-17",
+  "baselineCommit": "5482bfb459cd98a68010f9b744815b6145982503",
+  "physicalPhoneVerification": {
+    "status": "pending",
+    "device": null,
+    "browser": null,
+    "ownerResult": null
+  },
+  "browser": "Chromium headless, emulated viewports; not a physical phone",
+  "viewportWidths": [
+    320,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "pages": [
+    "agent-concepts-mcp-basics.html",
+    "automation-workflow-v2.html",
+    "build-the-agent.html",
+    "dns-walkthrough.html",
+    "explain-it-like-you-built-it.html",
+    "index.html",
+    "live-evidence.html",
+    "mobile-fix-log.html",
+    "personal-agent-spec.html",
+    "stack-rationale.html"
+  ],
+  "layoutChecks": {
+    "combinations": 50,
+    "documentOverflowAfter": 0,
+    "overflowBefore": [
+      {
+        "file": "automation-workflow-v2.html",
+        "width": 320,
+        "excessPixels": 106
+      },
+      {
+        "file": "automation-workflow-v2.html",
+        "width": 390,
+        "excessPixels": 36
+      }
+    ]
+  },
+  "automatedAccessibility": {
+    "tool": "axe-core",
+    "version": "4.14.0",
+    "width": 390,
+    "tags": [
+      "wcag2a",
+      "wcag2aa",
+      "wcag21aa",
+      "wcag22aa"
+    ],
+    "affectedContrastElementsBefore": 31,
+    "violationsAfter": 0,
+    "fullConformanceClaim": false
+  },
+  "localResourcesAndAnchors": {
+    "checked": 74,
+    "failures": 0
+  },
+  "externalHttpChecks": {
+    "distinctOriginalUrls": 39,
+    "http200": 38,
+    "manualCheckRequired": [
+      "https://www.linkedin.com/in/eduardo-seixas89/"
+    ],
+    "results": [
+      {
+        "url": "https://alignment.anthropic.com/2026/auditbench/",
+        "result": "200 https://alignment.anthropic.com/2026/auditbench/",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://alignment.anthropic.com/2025/bloom-auto-evals/",
+        "result": "200 https://alignment.anthropic.com/2025/bloom-auto-evals/",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://arxiv.org/abs/2505.17613",
+        "result": "200 https://arxiv.org/abs/2505.17613",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://arxiv.org/abs/2605.10912",
+        "result": "200 https://arxiv.org/abs/2605.10912",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://arxiv.org/abs/2506.13639",
+        "result": "200 https://arxiv.org/abs/2506.13639",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://arxiv.org/abs/2601.21666",
+        "result": "200 https://arxiv.org/abs/2601.21666",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages",
+        "result": "200 https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https",
+        "result": "200 https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://calendly.com/eduardosseixas89/30min",
+        "result": "200 https://calendly.com/eduardosseixas89/30min",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://deploymentsafety.openai.com/",
+        "result": "200 https://deploymentsafety.openai.com/",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://deploymentsafety.openai.com/chatgpt-agent/promptinjection",
+        "result": "200 https://deploymentsafety.openai.com/chatgpt-agent/promptinjection",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://arxiv.org/abs/2605.27445",
+        "result": "200 https://arxiv.org/abs/2605.27445",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages",
+        "result": "200 https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+        "result": "200 https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://docs.github.com/en/rest/git/trees#get-a-tree",
+        "result": "200 https://docs.github.com/en/rest/git/trees#get-a-tree",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://docs.github.com/en/rest/commits/commits#get-a-commit",
+        "result": "200 https://docs.github.com/en/rest/commits/commits#get-a-commit",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://docs.langchain.com/langsmith/evaluate-rag-tutorial",
+        "result": "200 https://docs.langchain.com/langsmith/evaluate-rag-tutorial",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://github.com/Eseixas89",
+        "result": "200 https://github.com/Eseixas89",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://eseixas89.github.io/ai-evaluation-portfolio/",
+        "result": "200 https://eseixas89.github.io/ai-evaluation-portfolio/",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/connector-evidence.md",
+        "result": "200 https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/connector-evidence.md",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/fl-07-agent/BUILD_LOG.md",
+        "result": "200 https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/fl-07-agent/BUILD_LOG.md",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://github.com/Eseixas89/ai-evaluation-portfolio",
+        "result": "200 https://github.com/Eseixas89/ai-evaluation-portfolio",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/",
+        "result": "200 https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/fl-07-agent/EVALS.md",
+        "result": "200 https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/fl-07-agent/EVALS.md",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/live-evidence.js",
+        "result": "200 https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/live-evidence.js",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/fl-07-agent/SUBMISSION.md",
+        "result": "200 https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/fl-07-agent/SUBMISSION.md",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://github.com/Eseixas89/ai-evaluation-portfolio/tree/main/fl-07-agent",
+        "result": "200 https://github.com/Eseixas89/ai-evaluation-portfolio/tree/main/fl-07-agent",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt",
+        "result": "200 https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://help.openai.com/en/articles/11487775-connectors-in",
+        "result": "200 https://help.openai.com/en/articles/11487775-connected-apps-in-chatgpt",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://modelcontextprotocol.io/specification/draft/server/index",
+        "result": "200 https://modelcontextprotocol.io/specification/draft/server/index",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://openai.com/index/gdpval/",
+        "result": "200 https://openai.com/index/gdpval/",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://openai.com/index/designing-agents-to-resist-prompt-injection/",
+        "result": "200 https://openai.com/index/designing-agents-to-resist-prompt-injection/",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://openai.com/safety/prompt-injections/",
+        "result": "200 https://openai.com/safety/prompt-injections/",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://www.deviantart.com/epyon89",
+        "result": "200 https://www.deviantart.com/epyon89",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://www.cloudflare.com/learning/dns/what-is-dns/",
+        "result": "200 https://www.cloudflare.com/learning/dns/what-is-dns/",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://www.cloudflare.com/learning/dns/dns-records/dns-cname-record/",
+        "result": "200 https://www.cloudflare.com/learning/dns/dns-records/dns-cname-record/",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://www.linkedin.com/in/eduardo-seixas89/",
+        "result": "999 https://www.linkedin.com/in/eduardo-seixas89/",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://www.anthropic.com/engineering/building-effective-agents",
+        "result": "200 https://www.anthropic.com/engineering/building-effective-agents",
+        "error": "",
+        "exit": 0
+      },
+      {
+        "url": "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+        "result": "200 https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+        "error": "",
+        "exit": 0
+      }
+    ]
+  },
+  "additionalChecks": [
+    "Keyboard skip link",
+    "Keyboard horizontal scrolling within the labelled table region",
+    "Homepage 200% root text size",
+    "Emulated touch demo with fixture API responses, no result overflow",
+    "Eight original distinct internal HTML page links clicked",
+    "New fix-log link clicked",
+    "CV download byte-for-byte comparison",
+    "Six screenshot images loaded without upscaling"
+  ],
+  "knownLimits": [
+    "Physical phone and mobile Safari not tested",
+    "External HTTP checks establish reachability, not content or booking availability",
+    "Email app invocation requires user device; no email sent",
+    "No full WCAG conformance claim"
+  ]
+}
