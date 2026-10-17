@@ -38,7 +38,12 @@
       if (response.status === 404) throw new Error("The public repository could not be found. Open the repository link below to check its availability.");
       throw new Error(`GitHub could not complete the lookup (HTTP ${response.status}). Try again later or open the repository below.`);
     }
-    return response.json();
+    try {
+      return await response.json();
+    } catch (error) {
+      if (error.name === "AbortError") throw error;
+      throw new Error("GitHub returned an unreadable response. Try again later or open the repository below.");
+    }
   }
 
   async function loadSnapshot() {
@@ -47,11 +52,17 @@
     const timeout = setTimeout(() => controller.abort(), 15000);
     try {
       const commit = await getJSON(`${api}/commits/main`, controller.signal);
-      if (!/^[a-f0-9]{40}$/.test(commit.sha) || !/^[a-f0-9]{40}$/.test(commit.commit?.tree?.sha)) {
+      if (!commit || typeof commit !== "object" || !/^[a-f0-9]{40}$/.test(commit.sha) || !/^[a-f0-9]{40}$/.test(commit.commit?.tree?.sha)) {
         throw new Error("GitHub returned an unexpected commit response. Please try again later.");
       }
       const tree = await getJSON(`${api}/git/trees/${commit.commit.tree.sha}?recursive=1`, controller.signal);
-      if (tree.truncated || !Array.isArray(tree.tree)) throw new Error("GitHub did not return a complete file list. Inspect the repository directly below.");
+      if (!tree || tree.truncated !== false || !Array.isArray(tree.tree)) throw new Error("GitHub did not return a complete file list. Inspect the repository directly below.");
+      // Validate before caching: a broken response must not poison later retries.
+      if (!tree.tree.every(file => file && ["blob", "tree", "commit"].includes(file.type) &&
+          typeof file.path === "string" && !/[\\\u0000-\u001f\u007f]/.test(file.path) &&
+          file.path.split("/").every(part => part && part !== "." && part !== ".."))) {
+        throw new Error("GitHub returned an unexpected file entry. Try again later or inspect the repository below.");
+      }
       snapshot = {sha: commit.sha, tree: tree.tree, fetchedAt: new Date()};
       return {data: snapshot, cached: false};
     } finally {
@@ -76,7 +87,7 @@
       link.href = `https://github.com/${repository}/blob/${data.sha}/${file.path.split("/").map(encodeURIComponent).join("/")}`;
       link.textContent = file.path;
       const size = document.createElement("span");
-      size.textContent = Number.isFinite(file.size) ? `${file.size.toLocaleString()} B` : "Size unavailable";
+      size.textContent = Number.isSafeInteger(file.size) && file.size >= 0 ? `${file.size.toLocaleString()} B` : "Size unavailable";
       item.append(link, size);
       files.append(item);
     }
@@ -92,8 +103,13 @@
   form.addEventListener("submit", async event => {
     event.preventDefault();
     if (button.disabled) return;
+    if (!Object.hasOwn(projects, select.value)) {
+      results.hidden = true;
+      status.dataset.state = "error";
+      status.textContent = "Choose a valid project from the list, then try again.";
+      return;
+    }
     const project = projects[select.value];
-    if (!project) return;
     results.hidden = true;
     results.setAttribute("aria-busy", "true");
     button.disabled = true;

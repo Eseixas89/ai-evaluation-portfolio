@@ -1,0 +1,757 @@
+{
+  "timestamp": "2026-10-17T19:02:46.630Z",
+  "scope": "Local source; Chromium layout, axe, navigation, and metadata checks",
+  "pages": [
+    {
+      "file": "404.html",
+      "layouts": [
+        {
+          "width": 320,
+          "overflow": 0
+        },
+        {
+          "width": 390,
+          "overflow": 0
+        },
+        {
+          "width": 768,
+          "overflow": 0
+        },
+        {
+          "width": 1024,
+          "overflow": 0
+        },
+        {
+          "width": 1440,
+          "overflow": 0
+        }
+      ],
+      "metadata": {
+        "title": "Page not found | Eduardo Seixas",
+        "description": "Return to Eduardo Seixas's portfolio or inspect the public project evidence."
+      },
+      "axeViolations": []
+    },
+    {
+      "file": "agent-concepts-mcp-basics.html",
+      "layouts": [
+        {
+          "width": 320,
+          "overflow": 0
+        },
+        {
+          "width": 390,
+          "overflow": 0
+        },
+        {
+          "width": 768,
+          "overflow": 0
+        },
+        {
+          "width": 1024,
+          "overflow": 0
+        },
+        {
+          "width": 1440,
+          "overflow": 0
+        }
+      ],
+      "metadata": {
+        "title": "Agent Concepts and MCP Basics — Eduardo Seixas",
+        "description": "Agent concepts, MCP basics, and GitHub connector evidence for Eduardo Seixas's FlyRank Week 4 assignment.",
+        "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/agent-concepts-mcp-basics.html",
+        "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+        "ogUrl": "https://eseixas89.github.io/ai-evaluation-portfolio/agent-concepts-mcp-basics.html",
+        "card": "summary_large_image"
+      },
+      "axeViolations": []
+    },
+    {
+      "file": "automation-workflow-v2.html",
+      "layouts": [
+        {
+          "width": 320,
+          "overflow": 0
+        },
+        {
+          "width": 390,
+          "overflow": 0
+        },
+        {
+          "width": 768,
+          "overflow": 0
+        },
+        {
+          "width": 1024,
+          "overflow": 0
+        },
+        {
+          "width": 1440,
+          "overflow": 0
+        }
+      ],
+      "metadata": {
+        "title": "Ship an Automation Workflow v2 — Eduardo Seixas",
+        "description": "FlyRank Week 4 automation workflow walkthrough by Eduardo Seixas.",
+        "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/automation-workflow-v2.html",
+        "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+        "ogUrl": "https://eseixas89.github.io/ai-evaluation-portfolio/automation-workflow-v2.html",
+        "card": "summary_large_image"
+      },
+      "axeViolations": []
+    },
+    {
+      "file": "build-the-agent.html",
+      "layouts": [
+        {
+          "width": 320,
+          "overflow": 0
+        },
+        {
+          "width": 390,
+          "overflow": 0
+        },
+        {
+          "width": 768,
+          "overflow": 0
+        },
+        {
+          "width": 1024,
+          "overflow": 0
+        },
+        {
+          "width": 1440,
+          "overflow": 0
+        }
+      ],
+      "metadata": {
+        "title": "Build the Agent — Eduardo Seixas",
+        "description": "FlyRank FL-07 Build the Agent submission for Eduardo Seixas.",
+        "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/build-the-agent.html",
+        "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+        "ogUrl": "https://eseixas89.github.io/ai-evaluation-portfolio/build-the-agent.html",
+        "card": "summary_large_image"
+      },
+      "axeViolations": []
+    },
+    {
+      "file": "critique-response.html",
+      "layouts": [
+        {
+          "width": 320,
+          "overflow": 0
+        },
+        {
+          "width": 390,
+          "overflow": 0
+        },
+        {
+          "width": 768,
+          "overflow": 0
+        },
+        {
+          "width": 1024,
+          "overflow": 0
+        },
+        {
+          "width": 1440,
+          "overflow": 0
+        }
+      ],
+      "metadata": {
+        "title": "Peer review and changes | Eduardo Seixas",
+        "description": "Peer feedback, must-fix priorities, and evidence of changes to Eduardo Seixas's AI evaluation portfolio.",
+        "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/critique-response.html",
+        "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+        "ogUrl": "https://eseixas89.github.io/ai-evaluation-portfolio/critique-response.html",
+        "card": "summary_large_image"
+      },
+      "axeViolations": []
+    },
+    {
+      "file": "dns-walkthrough.html",
+      "layouts": [
+        {
+          "width": 320,
+          "overflow": 0
+        },
+        {
+          "width": 390,
+          "overflow": 0
+        },
+        {
+          "width": 768,
+          "overflow": 0
+        },
+        {
+          "width": 1024,
+          "overflow": 0
+        },
+        {
+          "width": 1440,
+          "overflow": 0
+        }
+      ],
+      "metadata": {
+        "title": "Como o DNS funciona | Eduardo Seixas",
+        "description": "Uma explicação de DNS, resolver, nameservers, CNAME e HTTPS usando este portfólio como exemplo.",
+        "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/dns-walkthrough.html",
+        "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+        "ogUrl": "https://eseixas89.github.io/ai-evaluation-portfolio/dns-walkthrough.html",
+        "card": "summary_large_image"
+      },
+      "axeViolations": []
+    },
+    {
+      "file": "explain-it-like-you-built-it.html",
+      "layouts": [
+        {
+          "width": 320,
+          "overflow": 0
+        },
+        {
+          "width": 390,
+          "overflow": 0
+        },
+        {
+          "width": 768,
+          "overflow": 0
+        },
+        {
+          "width": 1024,
+          "overflow": 0
+        },
+        {
+          "width": 1440,
+          "overflow": 0
+        }
+      ],
+      "metadata": {
+        "title": "Explain It Like You Built It — Eduardo Seixas",
+        "description": "Week 5 Explain It Like You Built It submission.",
+        "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/explain-it-like-you-built-it.html",
+        "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+        "ogUrl": "https://eseixas89.github.io/ai-evaluation-portfolio/explain-it-like-you-built-it.html",
+        "card": "summary_large_image"
+      },
+      "axeViolations": []
+    },
+    {
+      "file": "hardening-review.html",
+      "layouts": [
+        {
+          "width": 320,
+          "overflow": 0
+        },
+        {
+          "width": 390,
+          "overflow": 0
+        },
+        {
+          "width": 768,
+          "overflow": 0
+        },
+        {
+          "width": 1024,
+          "overflow": 0
+        },
+        {
+          "width": 1440,
+          "overflow": 0
+        }
+      ],
+      "metadata": {
+        "title": "Hardening review: fixes and limits | Eduardo Seixas",
+        "description": "Break Your Own Site: reproduced failures, fixes, browser tests, PageSpeed results, SEO checks, and known limitations for Eduardo Seixas's portfolio.",
+        "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/hardening-review.html",
+        "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+        "ogUrl": "https://eseixas89.github.io/ai-evaluation-portfolio/hardening-review.html",
+        "card": "summary_large_image"
+      },
+      "axeViolations": []
+    },
+    {
+      "file": "index.html",
+      "layouts": [
+        {
+          "width": 320,
+          "overflow": 0
+        },
+        {
+          "width": 390,
+          "overflow": 0
+        },
+        {
+          "width": 768,
+          "overflow": 0
+        },
+        {
+          "width": 1024,
+          "overflow": 0
+        },
+        {
+          "width": 1440,
+          "overflow": 0
+        }
+      ],
+      "metadata": {
+        "title": "Eduardo Seixas | AI Evaluation & Applied Research",
+        "description": "Eduardo Seixas: AI evaluation, data quality, science education, and applied research. Explore projects, experience, and evidence.",
+        "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/",
+        "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+        "ogUrl": "https://eseixas89.github.io/ai-evaluation-portfolio/",
+        "card": "summary_large_image"
+      },
+      "axeViolations": []
+    },
+    {
+      "file": "live-evidence.html",
+      "layouts": [
+        {
+          "width": 320,
+          "overflow": 0
+        },
+        {
+          "width": 390,
+          "overflow": 0
+        },
+        {
+          "width": 768,
+          "overflow": 0
+        },
+        {
+          "width": 1024,
+          "overflow": 0
+        },
+        {
+          "width": 1440,
+          "overflow": 0
+        }
+      ],
+      "metadata": {
+        "title": "Live project evidence | Eduardo Seixas",
+        "description": "Inspect live source files behind Eduardo Seixas's AI evaluation projects, retrieved from the public GitHub API.",
+        "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/live-evidence.html",
+        "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+        "ogUrl": "https://eseixas89.github.io/ai-evaluation-portfolio/live-evidence.html",
+        "card": "summary_large_image"
+      },
+      "axeViolations": []
+    },
+    {
+      "file": "mobile-fix-log.html",
+      "layouts": [
+        {
+          "width": 320,
+          "overflow": 0
+        },
+        {
+          "width": 390,
+          "overflow": 0
+        },
+        {
+          "width": 768,
+          "overflow": 0
+        },
+        {
+          "width": 1024,
+          "overflow": 0
+        },
+        {
+          "width": 1440,
+          "overflow": 0
+        }
+      ],
+      "metadata": {
+        "title": "Mobile fixes and verification | Eduardo Seixas",
+        "description": "Before-and-after mobile, readability, accessibility, and link audit for Eduardo Seixas's portfolio, with physical-phone verification status.",
+        "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/mobile-fix-log.html",
+        "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+        "ogUrl": "https://eseixas89.github.io/ai-evaluation-portfolio/mobile-fix-log.html",
+        "card": "summary_large_image"
+      },
+      "axeViolations": []
+    },
+    {
+      "file": "personal-agent-spec.html",
+      "layouts": [
+        {
+          "width": 320,
+          "overflow": 0
+        },
+        {
+          "width": 390,
+          "overflow": 0
+        },
+        {
+          "width": 768,
+          "overflow": 0
+        },
+        {
+          "width": 1024,
+          "overflow": 0
+        },
+        {
+          "width": 1440,
+          "overflow": 0
+        }
+      ],
+      "metadata": {
+        "title": "Design Your Personal Agent — Eduardo Seixas",
+        "description": "Week 5 Design Your Personal Agent submission for Eduardo Seixas.",
+        "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/personal-agent-spec.html",
+        "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+        "ogUrl": "https://eseixas89.github.io/ai-evaluation-portfolio/personal-agent-spec.html",
+        "card": "summary_large_image"
+      },
+      "axeViolations": []
+    },
+    {
+      "file": "stack-rationale.html",
+      "layouts": [
+        {
+          "width": 320,
+          "overflow": 0
+        },
+        {
+          "width": 390,
+          "overflow": 0
+        },
+        {
+          "width": 768,
+          "overflow": 0
+        },
+        {
+          "width": 1024,
+          "overflow": 0
+        },
+        {
+          "width": 1440,
+          "overflow": 0
+        }
+      ],
+      "metadata": {
+        "title": "Three Roads: Choose Your Stack with AI — Eduardo Seixas",
+        "description": "Week 4 stack rationale for Eduardo Seixas's AI Evaluation portfolio.",
+        "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/stack-rationale.html",
+        "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+        "ogUrl": "https://eseixas89.github.io/ai-evaluation-portfolio/stack-rationale.html",
+        "card": "summary_large_image"
+      },
+      "axeViolations": []
+    }
+  ],
+  "links": [
+    {
+      "target": "/favicon.svg",
+      "status": 200
+    },
+    {
+      "target": "/styles.css",
+      "status": 200
+    },
+    {
+      "target": "/accessibility.css",
+      "status": 200
+    },
+    {
+      "target": "/404.html#main",
+      "status": 200
+    },
+    {
+      "target": "/",
+      "status": 200
+    },
+    {
+      "target": "/live-evidence.html",
+      "status": 200
+    },
+    {
+      "target": "/agent-concepts-mcp-basics.html",
+      "status": 200
+    },
+    {
+      "target": "/agent-concepts-mcp-basics.html#main",
+      "status": 200
+    },
+    {
+      "target": "/automation-workflow-v2.html",
+      "status": 200
+    },
+    {
+      "target": "/automation-workflow-v2.html#main",
+      "status": 200
+    },
+    {
+      "target": "/build-the-agent.html",
+      "status": 200
+    },
+    {
+      "target": "/build-the-agent.html#main",
+      "status": 200
+    },
+    {
+      "target": "/personal-agent-spec.html",
+      "status": 200
+    },
+    {
+      "target": "/critique-response.html",
+      "status": 200
+    },
+    {
+      "target": "/critique-response.html#main",
+      "status": 200
+    },
+    {
+      "target": "/#work",
+      "status": 200
+    },
+    {
+      "target": "/#case-portfolio-qa",
+      "status": 200
+    },
+    {
+      "target": "/#case-research-scout",
+      "status": 200
+    },
+    {
+      "target": "/#case-research-workflow",
+      "status": 200
+    },
+    {
+      "target": "/#case-connectors",
+      "status": 200
+    },
+    {
+      "target": "/#case-visual-ai",
+      "status": 200
+    },
+    {
+      "target": "/assets/critique/selected-work-before.jpg",
+      "status": 200
+    },
+    {
+      "target": "/assets/critique/selected-work-after.jpg",
+      "status": 200
+    },
+    {
+      "target": "/dns-walkthrough.html",
+      "status": 200
+    },
+    {
+      "target": "/dns-walkthrough.html#main",
+      "status": 200
+    },
+    {
+      "target": "/explain-it-like-you-built-it.html",
+      "status": 200
+    },
+    {
+      "target": "/explain-it-like-you-built-it.html#main",
+      "status": 200
+    },
+    {
+      "target": "/hardening-review.html",
+      "status": 200
+    },
+    {
+      "target": "/hardening-review.html#main",
+      "status": 200
+    },
+    {
+      "target": "/assets/hardening/after-tests.json",
+      "status": 200
+    },
+    {
+      "target": "/mobile-fix-log.html",
+      "status": 200
+    },
+    {
+      "target": "/assets/hardening/baseline-tests.json",
+      "status": 200
+    },
+    {
+      "target": "/assets/hardening/site-checks.json",
+      "status": 200
+    },
+    {
+      "target": "/assets/hardening/firefox-evidence.jpg",
+      "status": 200
+    },
+    {
+      "target": "/sitemap.xml",
+      "status": 200
+    },
+    {
+      "target": "/assets/social-preview.png",
+      "status": 200
+    },
+    {
+      "target": "/assets/hardening/pagespeed-mobile.jpg",
+      "status": 200
+    },
+    {
+      "target": "/assets/hardening/external-links.json",
+      "status": 200
+    },
+    {
+      "target": "/index.html#main",
+      "status": 200
+    },
+    {
+      "target": "/index.html#work",
+      "status": 200
+    },
+    {
+      "target": "/index.html#about",
+      "status": 200
+    },
+    {
+      "target": "/index.html#experience",
+      "status": 200
+    },
+    {
+      "target": "/index.html#contact",
+      "status": 200
+    },
+    {
+      "target": "/assets/Eduardo_Seixas_CV.pdf",
+      "status": 200
+    },
+    {
+      "target": "/automation-workflow-config.md",
+      "status": 200
+    },
+    {
+      "target": "/connector-evidence.md",
+      "status": 200
+    },
+    {
+      "target": "/stack-rationale.html",
+      "status": 200
+    },
+    {
+      "target": "/live-evidence.css",
+      "status": 200
+    },
+    {
+      "target": "/live-evidence.js",
+      "status": 200
+    },
+    {
+      "target": "/live-evidence.html#main",
+      "status": 200
+    },
+    {
+      "target": "/live-evidence.html#how-it-works",
+      "status": 200
+    },
+    {
+      "target": "/#contact",
+      "status": 200
+    },
+    {
+      "target": "/mobile-fix-log.html#main",
+      "status": 200
+    },
+    {
+      "target": "/assets/mobile-audit/physical-phone-home-2026-10-17.jpg",
+      "status": 200
+    },
+    {
+      "target": "/assets/mobile-audit/index-before.jpg",
+      "status": 200
+    },
+    {
+      "target": "/assets/mobile-audit/index-after.jpg",
+      "status": 200
+    },
+    {
+      "target": "/assets/mobile-audit/table-before.jpg",
+      "status": 200
+    },
+    {
+      "target": "/assets/mobile-audit/table-after.jpg",
+      "status": 200
+    },
+    {
+      "target": "/assets/mobile-audit/walkthrough-before.jpg",
+      "status": 200
+    },
+    {
+      "target": "/assets/mobile-audit/walkthrough-after.jpg",
+      "status": 200
+    },
+    {
+      "target": "/make-it-do-something.md",
+      "status": 200
+    },
+    {
+      "target": "/mobile-audit-results.json",
+      "status": 200
+    },
+    {
+      "target": "/personal-agent-spec.html#main",
+      "status": 200
+    },
+    {
+      "target": "/stack-rationale.html#main",
+      "status": 200
+    }
+  ],
+  "primaryActions": [
+    "Explore my work scrolls to #work",
+    "Download CV produces the expected PDF download",
+    "Homepage demo link opens the explorer",
+    "Direct repository fallback has the expected public destination"
+  ],
+  "externalLinks": [
+    "https://alignment.anthropic.com/2025/bloom-auto-evals/",
+    "https://alignment.anthropic.com/2026/auditbench/",
+    "https://arxiv.org/abs/2505.17613",
+    "https://arxiv.org/abs/2506.13639",
+    "https://arxiv.org/abs/2601.21666",
+    "https://arxiv.org/abs/2605.10912",
+    "https://arxiv.org/abs/2605.27445",
+    "https://calendly.com/eduardosseixas89/30min",
+    "https://deploymentsafety.openai.com/",
+    "https://deploymentsafety.openai.com/chatgpt-agent/promptinjection",
+    "https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages",
+    "https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https",
+    "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages",
+    "https://docs.github.com/en/rest/commits/commits#get-a-commit",
+    "https://docs.github.com/en/rest/git/trees#get-a-tree",
+    "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+    "https://docs.langchain.com/langsmith/evaluate-rag-tutorial",
+    "https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/",
+    "https://github.com/Eseixas89",
+    "https://github.com/Eseixas89/ai-evaluation-portfolio",
+    "https://github.com/Eseixas89/ai-evaluation-portfolio/blob/9d6350704f3da108537227632ad4e89de23f6bb2/index.html",
+    "https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/accessibility.css",
+    "https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/fl-07-agent/BUILD_LOG.md",
+    "https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/fl-07-agent/EVALS.md",
+    "https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/fl-07-agent/SUBMISSION.md",
+    "https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/live-evidence.js",
+    "https://github.com/Eseixas89/ai-evaluation-portfolio/blob/main/tests/hardening.cjs",
+    "https://github.com/Eseixas89/ai-evaluation-portfolio/tree/main/fl-07-agent",
+    "https://help.openai.com/en/articles/10291617-scheduled-tasks-in-chatgpt",
+    "https://help.openai.com/en/articles/11487775-connectors-in",
+    "https://modelcontextprotocol.io/specification/draft/server/index",
+    "https://openai.com/index/designing-agents-to-resist-prompt-injection/",
+    "https://openai.com/index/gdpval/",
+    "https://openai.com/safety/prompt-injections/",
+    "https://pagespeed.web.dev/analysis/https-eseixas89-github-io-ai-evaluation-portfolio/ya1g8d7wsg?form_factor=mobile",
+    "https://www.anthropic.com/engineering/building-effective-agents",
+    "https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents",
+    "https://www.cloudflare.com/learning/dns/dns-records/dns-cname-record/",
+    "https://www.cloudflare.com/learning/dns/what-is-dns/",
+    "https://www.deviantart.com/epyon89",
+    "https://www.linkedin.com/in/eduardo-seixas89/",
+    "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+    "https://www.w3.org/WAI/WCAG22/Understanding/reflow.html",
+    "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html"
+  ],
+  "layoutChecks": 65,
+  "localReferences": 64,
+  "passed": true
+}

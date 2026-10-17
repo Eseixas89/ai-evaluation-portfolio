@@ -1,0 +1,188 @@
+{
+  "timestamp": "2026-10-17T18:58:32.291Z",
+  "mode": "baseline",
+  "scope": "Local real browser; intercepted GitHub API fixtures",
+  "cases": [
+    {
+      "name": "Invalid selection: \"\"",
+      "passed": false,
+      "assertion": "The input did not match the regular expression /Choose a valid project/. Input:\n\n'Ready. Choose a project, then load its evidence.'\n",
+      "calls": 0,
+      "status": "Ready. Choose a project, then load its evidence.",
+      "pageErrors": []
+    },
+    {
+      "name": "Invalid selection: \"garbage\"",
+      "passed": false,
+      "assertion": "The input did not match the regular expression /Choose a valid project/. Input:\n\n'Ready. Choose a project, then load its evidence.'\n",
+      "calls": 0,
+      "status": "Ready. Choose a project, then load its evidence.",
+      "pageErrors": []
+    },
+    {
+      "name": "Invalid selection: \"constructor\"",
+      "passed": false,
+      "assertion": "The input did not match the regular expression /Choose a valid project/. Input:\n\n'GitHub could not be reached. Check your connection and try again, or open the repository below.'\n",
+      "calls": 2,
+      "status": "GitHub could not be reached. Check your connection and try again, or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "Invalid selection: \"__proto__\"",
+      "passed": false,
+      "assertion": "The input did not match the regular expression /Choose a valid project/. Input:\n\n'GitHub could not be reached. Check your connection and try again, or open the repository below.'\n",
+      "calls": 2,
+      "status": "GitHub could not be reached. Check your connection and try again, or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "Null commit",
+      "passed": false,
+      "assertion": "The input did not match the regular expression /unexpected commit response/. Input:\n\n'GitHub could not be reached. Check your connection and try again, or open the repository below.'\n",
+      "calls": 1,
+      "status": "GitHub could not be reached. Check your connection and try again, or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "Invalid commit SHA",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 1,
+      "status": "GitHub returned an unexpected commit response. Please try again later.",
+      "pageErrors": []
+    },
+    {
+      "name": "Malformed JSON",
+      "passed": false,
+      "assertion": "The input did not match the regular expression /unreadable response/. Input:\n\n\"Expected property name or '}' in JSON at position 1 (line 1 column 2)\"\n",
+      "calls": 1,
+      "status": "Expected property name or '}' in JSON at position 1 (line 1 column 2)",
+      "pageErrors": []
+    },
+    {
+      "name": "Null tree",
+      "passed": false,
+      "assertion": "The input did not match the regular expression /complete file list/. Input:\n\n'GitHub could not be reached. Check your connection and try again, or open the repository below.'\n",
+      "calls": 2,
+      "status": "GitHub could not be reached. Check your connection and try again, or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "Null tree entry",
+      "passed": false,
+      "assertion": "The input did not match the regular expression /unexpected file entry/. Input:\n\n'GitHub could not be reached. Check your connection and try again, or open the repository below.'\n",
+      "calls": 2,
+      "status": "GitHub could not be reached. Check your connection and try again, or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "Traversal path",
+      "passed": false,
+      "assertion": "The input did not match the regular expression /unexpected file entry/. Input:\n\n'No matching files were found in this snapshot. Inspect the repository directly below.'\n",
+      "calls": 2,
+      "status": "No matching files were found in this snapshot. Inspect the repository directly below.",
+      "pageErrors": []
+    },
+    {
+      "name": "Truncated tree",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 2,
+      "status": "GitHub did not return a complete file list. Inspect the repository directly below.",
+      "pageErrors": []
+    },
+    {
+      "name": "HTTP 404",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 1,
+      "status": "The public repository could not be found. Open the repository link below to check its availability.",
+      "pageErrors": []
+    },
+    {
+      "name": "HTTP 500",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 1,
+      "status": "GitHub could not complete the lookup (HTTP 500). Try again later or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "HTTP 429",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 1,
+      "status": "GitHub's public API limit has been reached. Try again later or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "HTTP 403 exhausted limit",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 1,
+      "status": "GitHub's public API limit has been reached. Try again later or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "Network failure",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 1,
+      "status": "GitHub could not be reached. Check your connection and try again, or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "Timeout",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 1,
+      "status": "The GitHub lookup timed out. Try again or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "No matching files",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 2,
+      "status": "No matching files were found in this snapshot. Inspect the repository directly below.",
+      "pageErrors": []
+    },
+    {
+      "name": "Filename treated as text; unavailable negative size",
+      "passed": false,
+      "assertion": "The input did not match the regular expression /Size unavailable/. Input:\n\n'fl-07-agent/<img onerror=alert(1)>.md\\n-1 B'\n",
+      "calls": 2,
+      "status": "1 evidence files found. Retrieved from GitHub at Oct 17, 2026, 1:58:50 PM GMT-5.",
+      "pageErrors": []
+    },
+    {
+      "name": "Fast double submit; disabled while pending; cache; expiry",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 4,
+      "status": "1 evidence files found. Retrieved from GitHub at Oct 17, 2026, 2:03:36 PM GMT-5.",
+      "pageErrors": []
+    },
+    {
+      "name": "Invalid payload is not cached; retry works",
+      "passed": false,
+      "assertion": "Expected values to be strictly equal:\n\n'error' !== 'success'\n",
+      "calls": 2,
+      "status": "GitHub could not be reached. Check your connection and try again, or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "JavaScript disabled: repository fallback visible",
+      "passed": true
+    },
+    {
+      "name": "Firefox 153 desktop: lookup, pinned link, tablet width layout",
+      "passed": true,
+      "overflow": false
+    }
+  ],
+  "chromium": "153.0.8010.0",
+  "firefox": "153.0",
+  "passed": 12,
+  "total": 23
+}

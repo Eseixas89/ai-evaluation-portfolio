@@ -1,0 +1,188 @@
+{
+  "timestamp": "2026-10-17T18:59:41.360Z",
+  "mode": "after",
+  "scope": "Local real browser; intercepted GitHub API fixtures",
+  "cases": [
+    {
+      "name": "Invalid selection: \"\"",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 0,
+      "status": "Choose a valid project from the list, then try again.",
+      "pageErrors": []
+    },
+    {
+      "name": "Invalid selection: \"garbage\"",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 0,
+      "status": "Choose a valid project from the list, then try again.",
+      "pageErrors": []
+    },
+    {
+      "name": "Invalid selection: \"constructor\"",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 0,
+      "status": "Choose a valid project from the list, then try again.",
+      "pageErrors": []
+    },
+    {
+      "name": "Invalid selection: \"__proto__\"",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 0,
+      "status": "Choose a valid project from the list, then try again.",
+      "pageErrors": []
+    },
+    {
+      "name": "Null commit",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 1,
+      "status": "GitHub returned an unexpected commit response. Please try again later.",
+      "pageErrors": []
+    },
+    {
+      "name": "Invalid commit SHA",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 1,
+      "status": "GitHub returned an unexpected commit response. Please try again later.",
+      "pageErrors": []
+    },
+    {
+      "name": "Malformed JSON",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 1,
+      "status": "GitHub returned an unreadable response. Try again later or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "Null tree",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 2,
+      "status": "GitHub did not return a complete file list. Inspect the repository directly below.",
+      "pageErrors": []
+    },
+    {
+      "name": "Null tree entry",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 2,
+      "status": "GitHub returned an unexpected file entry. Try again later or inspect the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "Traversal path",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 2,
+      "status": "GitHub returned an unexpected file entry. Try again later or inspect the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "Truncated tree",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 2,
+      "status": "GitHub did not return a complete file list. Inspect the repository directly below.",
+      "pageErrors": []
+    },
+    {
+      "name": "HTTP 404",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 1,
+      "status": "The public repository could not be found. Open the repository link below to check its availability.",
+      "pageErrors": []
+    },
+    {
+      "name": "HTTP 500",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 1,
+      "status": "GitHub could not complete the lookup (HTTP 500). Try again later or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "HTTP 429",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 1,
+      "status": "GitHub's public API limit has been reached. Try again later or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "HTTP 403 exhausted limit",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 1,
+      "status": "GitHub's public API limit has been reached. Try again later or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "Network failure",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 1,
+      "status": "GitHub could not be reached. Check your connection and try again, or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "Timeout",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 1,
+      "status": "The GitHub lookup timed out. Try again or open the repository below.",
+      "pageErrors": []
+    },
+    {
+      "name": "No matching files",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 2,
+      "status": "No matching files were found in this snapshot. Inspect the repository directly below.",
+      "pageErrors": []
+    },
+    {
+      "name": "Filename treated as text; unavailable negative size",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 2,
+      "status": "1 evidence files found. Retrieved from GitHub at Oct 17, 2026, 1:59:59 PM GMT-5.",
+      "pageErrors": []
+    },
+    {
+      "name": "Fast double submit; disabled while pending; cache; expiry",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 4,
+      "status": "1 evidence files found. Retrieved from GitHub at Oct 17, 2026, 2:04:45 PM GMT-5.",
+      "pageErrors": []
+    },
+    {
+      "name": "Invalid payload is not cached; retry works",
+      "passed": true,
+      "assertion": "passed",
+      "calls": 4,
+      "status": "1 evidence files found. Retrieved from GitHub at Oct 17, 2026, 2:04:45 PM GMT-5.",
+      "pageErrors": []
+    },
+    {
+      "name": "JavaScript disabled: repository fallback visible",
+      "passed": true
+    },
+    {
+      "name": "Firefox 153 desktop: lookup, pinned link, tablet width layout",
+      "passed": true,
+      "overflow": false
+    }
+  ],
+  "chromium": "153.0.8010.0",
+  "firefox": "153.0",
+  "passed": 23,
+  "total": 23
+}
