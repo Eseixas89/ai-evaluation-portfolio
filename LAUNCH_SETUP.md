@@ -28,7 +28,7 @@ No badge is installed while the issued credential reference is unavailable. The 
 
 ## Fresh phone check
 
-On the Samsung A15, open the public address again. Confirm the title/icon, navigation, CV download, and live evidence lookup. Record the actual result rather than reusing the earlier phone session as a new check.
+Completed as a fresh opening on 17 October 2026: the owner supplied a Samsung A15 screenshot with the clock at 16:26 local and reported “Continua funcionando”. The capture shows the selected work section. It is recorded in `launch-readiness.html` and `assets/launch/launch-checks.json`, separately from the earlier detailed interaction checks.
 
 ## Submission
 
