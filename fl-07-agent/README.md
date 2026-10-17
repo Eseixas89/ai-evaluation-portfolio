@@ -62,6 +62,16 @@ export GEMINI_API_KEY="YOUR_KEY_HERE"
 
 ## Run the MVP
 
+First check the setup and the four live GitHub sources:
+
+```bash
+python agent.py --check
+```
+
+This command checks Python, the installed SDK, key presence (without showing its value), and GitHub connectivity. It does not call Gemini, validate the key, or count as a successful end-to-end run. Exit code 2 means something still needs setup.
+
+Then run the actual agent:
+
 ```bash
 python agent.py
 ```
@@ -72,7 +82,13 @@ Focused run:
 python agent.py --prompt "What changed recently in agent evaluation and reliability?"
 ```
 
-The default report is saved to `runs/latest-brief.md` and also printed to the terminal. The terminal output deliberately shows the live GitHub connection step and that Google Search grounding is enabled, which makes the end-to-end tool use visible in a raw screen recording.
+The default report is saved to `runs/latest-brief.md` and also printed to the terminal. The terminal shows individual GitHub reads and the Google Search call/result steps actually returned by Gemini. A response without a completed search trace exits with code 7 instead of being presented as a successful research run. If the API exposes no citation annotations, the report explicitly requires review.
+
+Local regression checks (no model request):
+
+```bash
+python -m unittest -v
+```
 
 ## Agent boundaries
 
@@ -81,6 +97,7 @@ The MVP is intentionally read-only. It does not modify GitHub, publish content, 
 ## Files
 
 - `agent.py` — complete MVP agent
+- `test_agent.py` — local regression checks, not proof of a live run
 - `BUILD_LOG.md` — decisions, changes, cuts, and verification
 - `EVALS.md` — FL-06 evaluation cases mapped to the build
 - `sample-prompt.txt` — recording/demo prompt

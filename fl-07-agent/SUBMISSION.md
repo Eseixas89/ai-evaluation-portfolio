@@ -18,6 +18,8 @@ Suggested reviewer note:
 
 Keep the recording unedited.
 
+Before recording, run `python agent.py --check` and resolve any missing setup. This is only a preflight; the recording must show `python agent.py` completing a real Gemini run.
+
 1. Open the repository at `fl-07-agent/` and briefly show `BUILD_LOG.md`.
 2. Open a terminal in that folder.
 3. Verify the key exists **without showing it**.
@@ -26,7 +28,7 @@ Keep the recording unedited.
 5. Do not touch the run while it executes.
 6. Point out the live steps printed by the program:
    - GitHub portfolio context loaded.
-   - Gemini running with Google Search grounding.
+   - Gemini running, followed by observed Google Search calls/results and citation count.
    - Markdown brief saved.
 7. Show the final terminal output and open `runs/latest-brief.md`.
 8. Scroll enough to show findings, evidence URLs, uncertainty, portfolio relevance, exclusions, and suggested follow-up.
