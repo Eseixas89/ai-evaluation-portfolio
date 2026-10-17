@@ -3,7 +3,7 @@
   "baselineCommit": "5482bfb459cd98a68010f9b744815b6145982503",
   "physicalPhoneVerification": {
     "status": "partial_homepage_screenshot_received",
-    "device": null,
+    "device": "Samsung A15",
     "browser": null,
     "ownerResult": null,
     "dateReceived": "2026-10-17",
@@ -14,7 +14,7 @@
       "Visible navigation, introduction and stacked buttons fit the screen without apparent clipping"
     ],
     "pending": [
-      "Device model and browser identification",
+      "Browser identification",
       "Full-page and landscape checks",
       "Navigation link and LinkedIn checks",
       "CV download",
