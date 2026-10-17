@@ -2,10 +2,24 @@
   "date": "2026-10-17",
   "baselineCommit": "5482bfb459cd98a68010f9b744815b6145982503",
   "physicalPhoneVerification": {
-    "status": "pending",
+    "status": "partial_homepage_screenshot_received",
     "device": null,
     "browser": null,
-    "ownerResult": null
+    "ownerResult": null,
+    "dateReceived": "2026-10-17",
+    "timeVisibleInScreenshot": "13:29",
+    "screenshot": "assets/mobile-audit/physical-phone-home-2026-10-17.jpg",
+    "observed": [
+      "Portrait homepage visible on phone",
+      "Visible navigation, introduction and stacked buttons fit the screen without apparent clipping"
+    ],
+    "pending": [
+      "Device model and browser identification",
+      "Full-page and landscape checks",
+      "Navigation link and LinkedIn checks",
+      "CV download",
+      "Live demo interaction"
+    ]
   },
   "browser": "Chromium headless, emulated viewports; not a physical phone",
   "viewportWidths": [
@@ -315,7 +329,7 @@
     "Six screenshot images loaded without upscaling"
   ],
   "knownLimits": [
-    "Physical phone and mobile Safari not tested",
+    "Owner-supplied physical-phone homepage screenshot received; interactions and mobile Safari not confirmed",
     "External HTTP checks establish reachability, not content or booking availability",
     "Email app invocation requires user device; no email sent",
     "No full WCAG conformance claim"

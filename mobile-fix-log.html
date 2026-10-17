@@ -15,8 +15,8 @@
 <main id="main" class="audit-report">
 <p class="eyebrow">Open It on Your Phone / Fix log / 17 October 2026</p>
 <h1>Readable. Tappable.<br>Checked across widths.</h1>
-<p>This log records real problems found in the portfolio, the fixes, and the checks performed with AI assistance. The screenshots below are browser captures at a <strong>390 × 844 CSS-pixel viewport</strong>; they are not photographs or screenshots from a physical phone.</p>
-<aside class="audit-status" aria-label="Verification status"><strong>Browser verification complete. Physical-phone verification pending.</strong><p>The assignment explicitly requires opening the site on a real phone. Device model, mobile browser, and the owner's result have not yet been supplied. This log does not claim that requirement is complete.</p></aside>
+<p>This log records real problems found in the portfolio, the fixes, and the checks performed with AI assistance. The before/after pairs below are browser captures at a <strong>390 × 844 CSS-pixel viewport</strong>. A separate screenshot supplied by the portfolio owner records the homepage on a physical phone.</p>
+<aside class="audit-status" aria-label="Verification status"><strong>Browser verification complete. Physical-phone homepage screenshot received; interaction checks pending.</strong><p>On 17 October 2026, the owner supplied a portrait phone screenshot showing the homepage with readable text, navigation, and stacked buttons inside the visible screen. Device model and browser were not supplied. The screenshot alone does not confirm scrolling through the full site, landscape layout, link taps, CV download, or demo interaction.</p></aside>
 <p><a href="./">Open the updated portfolio ↗</a> · <a href="live-evidence.html">Open the working demo ↗</a> · <a href="https://github.com/Eseixas89/ai-evaluation-portfolio">Open the repository ↗</a></p>
 <h2>What was broken, and what changed</h2>
 <ol>
@@ -27,6 +27,9 @@
 <li><strong>The publishing walkthrough had lost its reading layout.</strong> It still used <code>class="shell"</code>, which had no matching style. The content touched the screen edges. It now uses the shared article width, padding, and heading sizes.</li>
 <li><strong>Older project pages lacked an easy return path and skip link.</strong> A visible back-to-portfolio link, skip-to-main link, and consistent keyboard focus indicator were added. The hero also uses one column at intermediate tablet widths, and project detail labels have room to wrap without splitting short labels.</li>
 </ol>
+<h2>Physical-phone evidence supplied by the owner</h2>
+<p>The screenshot below shows the live homepage in portrait orientation, with 13:29 visible in the phone's status bar. The visible header, introduction, and buttons fit the screen without apparent clipping. This verifies only the visible layout, not the result of tapping the controls.</p>
+<figure style="margin:20px 0"><img src="assets/mobile-audit/physical-phone-home-2026-10-17.jpg" width="709" height="1536" loading="lazy" decoding="async" style="display:block;width:100%;max-width:390px;height:auto;border:1px solid var(--line);border-radius:5px" alt="Owner-supplied physical phone screenshot of the live portfolio homepage in portrait, showing navigation, introduction, and stacked work and CV buttons."><figcaption class="small">Owner-supplied phone screenshot, received 17 October 2026. Device model and browser not yet reported.</figcaption></figure>
 <h2>Before and after</h2>
 <p class="small">Same browser viewport for each pair. These are emulated mobile-width captures. The horizontally scrollable table is intentionally wider than its own region; it no longer widens the entire page.</p>
 <h3>Home: clearer navigation, larger metadata, stacked buttons</h3>
@@ -45,7 +48,7 @@
 <li><strong>External links:</strong> 38 of 39 distinct original HTTP(S) links returned HTTP 200 after redirects, including the repository, demo source, Calendly, and visual portfolio. LinkedIn returned HTTP 999 to the automated request and remains a manual check. An HTTP status checks reachability, not every destination's content or booking availability. The email link requires a configured email app and was not used to send a message.</li>
 <li><strong>Images and payload:</strong> the homepage uses a text/CSS monogram and an SVG favicon and has no raster work images to compress. Existing local assets were about 83 KB for the CV and 85 KB for the earlier evidence screenshot. This log uses compressed JPEG screenshots with explicit dimensions and lazy loading; screenshots are not loaded on the homepage.</li>
 </ul>
-<h2 id="phone-check">Finish the real-phone check</h2>
+<h2 id="phone-check">Finish the real-phone interaction checks</h2>
 <p>On a physical phone, open <a href="https://eseixas89.github.io/ai-evaluation-portfolio/">the live portfolio</a> and perform these checks before marking the assignment complete:</p>
 <ol>
 <li>Read the page in portrait and landscape. Confirm that text is comfortable, nothing is cut off, and the whole page does not slide sideways.</li>
@@ -55,7 +58,7 @@
 <li>Check LinkedIn and the visual portfolio. Confirm Calendly opens without making a booking, and the email link offers an email app without sending anything.</li>
 <li>Record the phone model, browser/version, date, issues found, and result. Add one phone screenshot to the submission if available.</li>
 </ol>
-<details lang="pt-BR"><summary>Roteiro curto em português</summary><p>Abre o portfólio no teu celular de verdade, lê em pé e deitado, testa o menu, o currículo, um projeto e a demonstração. Na página do workflow, arrasta a tabela para o lado: só a tabela deve deslizar. Confere também LinkedIn, Calendly e o link de e-mail. Depois registra o modelo do celular, navegador, data e se algo ficou cortado ou difícil de tocar. O teste em aparelho físico ainda está pendente neste registro.</p></details>
+<details lang="pt-BR"><summary>Roteiro curto em português</summary><p>Abre o portfólio no teu celular de verdade, lê em pé e deitado, testa o menu, o currículo, um projeto e a demonstração. Na página do workflow, arrasta a tabela para o lado: só a tabela deve deslizar. Confere também LinkedIn, Calendly e o link de e-mail. Depois registra o modelo do celular, navegador, data e se algo ficou cortado ou difícil de tocar. Já recebemos uma captura da página inicial em um celular físico. Ainda faltam confirmar modelo, navegador e o resultado dos cliques e da navegação.</p></details>
 <h2>Submission note after the phone check</h2>
 <p class="small">Draft for the portfolio owner to complete and adapt. Replace the bracketed fields only after a real test.</p>
 <pre>Updated portfolio and fix log: this page links to the live site and records the before/after fixes. I corrected a table overflowing on mobile, low-contrast labels, small navigation targets, small supporting text, and the publishing walkthrough's missing reading layout. Browser checks covered phone, tablet, and desktop widths. I also checked the live site on [phone model] using [browser/version] on [date]. Result: [what worked and any remaining issues].</pre>
