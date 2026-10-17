@@ -55,3 +55,8 @@ Implementation: `live-evidence.html`, `live-evidence.css`, `live-evidence.js`.
 ## Peer critique: show problem, contribution, and result
 
 [Review feedback and published changes](https://eseixas89.github.io/ai-evaluation-portfolio/critique-response.html). A real peer asked for clearer project achievements. The homepage now makes the problem, Eduardo's contribution, and the supported result explicit for each case; it also distinguishes published artifacts and planned validation from demonstrated outcomes. The Research Scout page now matches the build log's live-run verification boundary. The log records the critique, must-fix sorting, before/after captures, Ruben's positive follow-up about practical examples, and his optional wording change from “on my Samsung A15” to “on my phone”. His short first answer is preserved verbatim, and the documented timing of the proof-statement link is made explicit.
+
+
+## Hardening: failure cases, SEO, and limits
+
+[Public hardening review](https://eseixas89.github.io/ai-evaluation-portfolio/hardening-review.html) records reproduced failures, fix-now changes, known limitations, the public PageSpeed run, and the required peer/mentor checklist. Twenty-three browser regression scenarios passed after the changes; thirteen pages passed sixty-five layout checks. Public deployment checks and real demo results are recorded separately from API fixtures. Human hardening review is still pending. See `tests/README.md` for reproduction commands and `assets/hardening/` for evidence.

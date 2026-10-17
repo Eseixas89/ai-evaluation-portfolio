@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-10-17T19:05:09.451975+00:00",
+  "deployedCommit": "ee816badfc456a06ebc3765245553e4585bcffe9",
+  "method": "Public GET requests with redirects after deployment",
+  "checks": [
+    {
+      "path": "hardening-review.html",
+      "status": 200,
+      "bytes": 14238
+    },
+    {
+      "path": "live-evidence.js",
+      "status": 200,
+      "bytes": 7535,
+      "matchesLocalSource": true
+    },
+    {
+      "path": "assets/social-preview.png",
+      "status": 200,
+      "bytes": 62729
+    },
+    {
+      "path": "sitemap.xml",
+      "status": 200,
+      "bytes": 1288
+    },
+    {
+      "path": "assets/hardening/after-tests.json",
+      "status": 200,
+      "bytes": 5563
+    },
+    {
+      "path": "qa-missing-route-2026-10-17",
+      "status": 404,
+      "bytes": 1145,
+      "custom404Rendered": true
+    }
+  ],
+  "browserSmokeCheck": {
+    "browser": "Cloud Chrome",
+    "fetchedAtDisplayed": "17 October 2026, 16:04:29 BRT",
+    "snapshotCommit": "ee816badfc456a06ebc3765245553e4585bcffe9",
+    "scoutFiles": 7,
+    "workflowFiles": 2,
+    "connectorFiles": 2,
+    "laterProjectsReusedSnapshot": true,
+    "repositoryLinkOpened": "https://github.com/Eseixas89/ai-evaluation-portfolio",
+    "note": "Actual public API results observed through the published UI; not the failure-test fixtures."
+  }
+}
