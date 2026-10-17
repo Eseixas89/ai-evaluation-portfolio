@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Peer feedback, must-fix priorities, and evidence of changes to Eduardo Seixas's AI evaluation portfolio.">
+<title>Peer review and changes | Eduardo Seixas</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="accessibility.css">
+<style>
+.crit-log{width:min(900px,calc(100% - 40px));margin:40px auto 70px}.crit-log h1{font-size:clamp(2.5rem,6vw,4.2rem);margin:20px 0}.crit-log h2{font-size:2rem;margin:36px 0 16px}.crit-log h3{font-size:1.2rem;margin:22px 0 10px}.crit-log p,.crit-log li{max-width:76ch}.crit-log li{margin-block:12px}.crit-log blockquote{margin:20px 0;padding:18px 22px;border-left:4px solid var(--accent);background:var(--soft)}.crit-status{background:#fbf0da;border-left:4px solid #8c6424;padding:18px 22px;margin:24px 0}.crit-log code{font-size:.9em;overflow-wrap:anywhere}.crit-log .small{font-size:.875rem;color:var(--muted)}.crit-log dl{margin:20px 0}.crit-log dt{font-weight:600;margin-top:20px}.crit-log dd{margin:5px 0 0}.crit-log details{border-block:1px solid var(--line);padding:16px 0;margin:22px 0}.crit-log summary{display:flex;align-items:center;min-height:44px;font-weight:600;cursor:pointer}.crit-pairs{display:grid;grid-template-columns:1fr 1fr;gap:20px}.crit-pairs figure{margin:0;min-width:0}.crit-pairs img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:4px}.crit-pairs figcaption{font-size:.875rem;margin-top:10px}.crit-log pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:.9rem;line-height:1.6;padding:20px;background:var(--soft)}@media(max-width:600px){.crit-pairs{grid-template-columns:1fr}.crit-log h2{font-size:1.7rem}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="page-return"><a href="./">← Back to portfolio</a></header>
+<main id="main" class="crit-log">
+<p class="eyebrow">Survive the Crit / Peer review / 17 October 2026</p>
+<h1>Make the achievement<br>visible in the work.</h1>
+<p>A friend reviewed the live portfolio and could not clearly see the achievements behind the projects. This log records the feedback, how it was prioritized, and the changes made with AI assistance.</p>
+<aside class="crit-status" aria-label="Review status"><strong>Feedback received; required content changes addressed. Reviewer follow-up pending.</strong><p>The supplied conversation contains a concrete critique, but no explicit answers to the two required opening questions: what the reviewer understood in ten seconds, and whether the work made the claim believable. No reviewer approval of the revised site is claimed here.</p></aside>
+<p><a href="./#work">Inspect the revised project cases ↗</a> · <a href="https://github.com/Eseixas89/ai-evaluation-portfolio/blob/9d6350704f3da108537227632ad4e89de23f6bb2/index.html">Inspect the before-version source ↗</a></p>
+<h2>The proof statement used for this review</h2>
+<blockquote>I want to prove to a hiring manager responsible for AI evaluation, AI quality, or AI training that I can make consistent, evidence-based judgments about AI-generated outputs by applying explicit evaluation criteria and documenting the reasoning behind each decision. My goal is for them to invite me to an interview for an AI Evaluation, AI Quality, or AI Training role.</blockquote>
+<p class="small">Source: the existing Week 1 document, <em>Eduardo_Seixas_What_Are_You_Proving.pdf</em>. Intended audience: hiring managers for AI evaluation, quality, or training. Primary action: an interview invitation. The statement was included in the review-request draft prepared for the owner; the supplied chat excerpt does not independently show exactly what the reviewer received before responding.</p>
+<h2>What the reviewer actually said</h2>
+<p><strong>Reviewer:</strong> Ruben, a friend. <strong>Source:</strong> relevant chat excerpts supplied by the portfolio owner, dated 17 October 2026, 14:20–14:21 local time. Only the relevant feedback is reproduced; unrelated personal messages are omitted.</p>
+<blockquote lang="pt-BR">“qual problema eles tinham, o que tu fez pra resolver, e qual foi o resultado”<br><br>“Não ficou muito claro isso pra mim”</blockquote>
+<p>He also asked for the achievements from each project to be made visible. In practical terms, the old cards named the tools, focus, and evidence, but did not consistently tell the reader what problem was addressed, what Eduardo contributed, or what was actually achieved.</p>
+<h2>Must-fix versus nice-to-have</h2>
+<h3>Must-fix: one critique, three concrete changes</h3>
+<dl>
+<dt>1. State the problem for each selected project — addressed</dt><dd>Each homepage project card now includes a <strong>Problem</strong> field. This makes the reason for the work explicit instead of leaving it inside linked documentation.</dd>
+<dt>2. State the contribution — addressed</dt><dd>Each card now includes <strong>My role</strong>, identifying the work performed and AI assistance where applicable. The introduction also explicitly names Eduardo as an AI evaluator.</dd>
+<dt>3. State the demonstrated result — addressed</dt><dd>Each card now includes <strong>Result</strong>, paired with direct evidence links. Documented artifacts, measured checks, owner-reported phone testing, and still-planned validation are kept distinct.</dd>
+</dl>
+<h3>Nice-to-have: none explicitly raised by the reviewer</h3>
+<p>The supplied feedback does not contain a separate cosmetic suggestion to classify as optional. No mandatory feedback was downgraded to this category. Additional thumbnails or a scored visual before/after case could be future enhancements, but they are author-side ideas, not statements attributed to Ruben.</p>
+<h2>What changed on the live site</h2>
+<ul>
+<li><a href="./#case-portfolio-qa">Portfolio QA now leads the selected work.</a> Its result cites 31 corrected low-contrast elements across five pages, ten pages checked at five widths, and the owner's Samsung A15 confirmation. It links to the actual mobile fix log and live evidence lookup.</li>
+<li><a href="./#case-research-scout">Research Scout now states its delivery and verification boundary.</a> Published code, a build log, and seven planned evaluation cases are presented as artifacts. A recorded live Gemini run remains required; planned tests are not described as passes. The <a href="build-the-agent.html">project page</a> was corrected to match the build log.</li>
+<li><a href="./#case-research-workflow">The research workflow now states the problem, contribution, and five documented examples.</a> Estimated time savings are explicitly described as estimates rather than measured productivity gains.</li>
+<li><a href="./#case-connectors">The connector project now names the three recorded repository-read tasks.</a> It makes clear that the delivered result is observable connector use and an explainer, not a custom MCP server.</li>
+<li><a href="./#case-visual-ai">The visual project now distinguishes published work from a scored evaluation.</a> It identifies the reviewed qualities and the public gallery as the delivered artifact, without claiming an unpublished benchmark or client impact.</li>
+</ul>
+<h2>Before and after</h2>
+<p class="small">These are local browser captures of the baseline and revised source, at the same 1024-pixel-wide viewport. They are evidence of the content change, not a second review from Ruben.</p>
+<div class="crit-pairs"><figure><img src="assets/critique/selected-work-before.jpg" width="454" height="590" loading="lazy" decoding="async" alt="Before the critique: Research Scout was the featured card, using Focus and Evidence fields without a separate demonstrated-result field."><figcaption>Before — focus and evidence, with outcomes left implicit.</figcaption></figure><figure><img src="assets/critique/selected-work-after.jpg" width="454" height="848" loading="lazy" decoding="async" alt="After the critique: Portfolio QA leads, with explicit Problem, My role, and Result fields linked to the existing evidence."><figcaption>After — problem, contribution, and a supported result.</figcaption></figure></div>
+<h2>Validation of the changes</h2>
+<p>The homepage, Research Scout page, and this review log were checked at 320, 390, 768, 1024, and 1440 CSS pixels: 15 layout checks with no document-level horizontal overflow. Automated axe-core checks at 390 pixels reported no violations in the selected WCAG A/AA categories. Thirty-one local links and anchors resolved. These technical checks do not replace the reviewer's clarity judgment.</p>
+<h2>Response prepared for the reviewer</h2>
+<p class="small">Draft for the owner to send. It has not been sent automatically and does not imply the reviewer has checked the revision.</p>
+<pre lang="pt-BR">Valeu, Ruben. Teu comentário mostrou que eu estava apresentando as ferramentas e os projetos sem deixar claras as conquistas. Reorganizei os casos em problema, minha contribuição e resultado, com links para as evidências. Também deixei explícito quando o resultado é um artefato publicado e quando ainda falta uma validação.
+
+Quando puder, olha a versão atualizada: https://eseixas89.github.io/ai-evaluation-portfolio/
+
+Depois de dez segundos, o que tu entende que eu faço? E o trabalho apresentado te convence de que eu sei fazer isso? Se ainda faltar algo para ficar claro, me aponta.</pre>
+<h2>Remaining review evidence</h2>
+<ul>
+<li>The owner's record still needs confirmation that the reviewer received the Chapter 1 proof statement.</li>
+<li>The reviewer has not yet explicitly answered the two opening questions in the supplied excerpt.</li>
+<li>The revised page has not yet been confirmed as clearer by the reviewer.</li>
+</ul>
+<p>The substantive critique has been acted on. This record keeps those remaining items visible instead of declaring the assignment's human-review checkpoint approved.</p>
+<details lang="pt-BR"><summary>Resumo em português</summary><p>O Ruben apontou que os projetos não deixavam claros o problema, o que eu fiz e o resultado. Classifiquei isso como uma correção obrigatória e reorganizei os casos com esses três campos, usando resultados que têm evidência. A página do Research Scout também passou a mostrar que a execução real gravada ainda está pendente. Não houve sugestão opcional separada na conversa enviada. Ainda faltam confirmar o recebimento da declaração inicial e obter as duas respostas exigidas pela atividade, além de uma nova leitura do site pelo revisor.</p></details>
+</main>
+<footer class="container site-footer"><p>© 2026 Eduardo Seixas</p><a href="./#work">Inspect the updated work ↑</a></footer>
+</body></html>
