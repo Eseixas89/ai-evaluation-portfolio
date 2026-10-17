@@ -49,4 +49,4 @@ Implementation: `live-evidence.html`, `live-evidence.css`, `live-evidence.js`.
 
 ## Mobile, readability, and accessibility audit
 
-[Public before/after fix log](https://eseixas89.github.io/ai-evaluation-portfolio/mobile-fix-log.html). Shared fixes live in `accessibility.css`. Browser checks cover phone, tablet, and desktop widths, with screenshots explicitly labelled as emulated. **A physical-phone homepage screenshot has been received; browser identification and interaction checks are still pending** and has a checklist in the log. See `mobile-audit-results.json` for the scoped machine-check summary.
+[Public before/after fix log](https://eseixas89.github.io/ai-evaluation-portfolio/mobile-fix-log.html). Shared fixes live in `accessibility.css`. Browser checks cover phone, tablet, and desktop widths, with screenshots explicitly labelled as emulated. **The owner supplied a Samsung A15 screenshot and confirmed that menu navigation, CV download, and the live demonstration worked on that phone** and has a checklist in the log. See `mobile-audit-results.json` for the scoped machine-check summary.

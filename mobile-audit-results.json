@@ -2,10 +2,17 @@
   "date": "2026-10-17",
   "baselineCommit": "5482bfb459cd98a68010f9b744815b6145982503",
   "physicalPhoneVerification": {
-    "status": "partial_homepage_screenshot_received",
+    "status": "owner_confirmed_core_interactions_passed",
     "device": "Samsung A15",
     "browser": null,
-    "ownerResult": null,
+    "ownerResult": {
+      "date": "2026-10-17",
+      "source": "Owner confirmation in conversation",
+      "device": "Samsung A15",
+      "menuNavigation": "passed",
+      "cvDownload": "passed",
+      "liveDemo": "passed"
+    },
     "dateReceived": "2026-10-17",
     "timeVisibleInScreenshot": "13:29",
     "screenshot": "assets/mobile-audit/physical-phone-home-2026-10-17.jpg",
@@ -14,11 +21,10 @@
       "Visible navigation, introduction and stacked buttons fit the screen without apparent clipping"
     ],
     "pending": [
-      "Browser identification",
-      "Full-page and landscape checks",
-      "Navigation link and LinkedIn checks",
-      "CV download",
-      "Live demo interaction"
+      "Browser/version not supplied",
+      "Landscape and full-page checks not separately reported",
+      "Table swipe gesture not separately reported",
+      "LinkedIn not separately confirmed"
     ]
   },
   "browser": "Chromium headless, emulated viewports; not a physical phone",
@@ -329,7 +335,7 @@
     "Six screenshot images loaded without upscaling"
   ],
   "knownLimits": [
-    "Owner-supplied physical-phone homepage screenshot received; interactions and mobile Safari not confirmed",
+    "Samsung A15 menu, CV download, and demo confirmed by owner; browser/version, landscape, table gesture and LinkedIn not separately reported",
     "External HTTP checks establish reachability, not content or booking availability",
     "Email app invocation requires user device; no email sent",
     "No full WCAG conformance claim"
