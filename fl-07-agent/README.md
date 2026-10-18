@@ -97,3 +97,27 @@ The MVP is intentionally read-only. It does not modify GitHub, publish content, 
 6. Open `runs/latest-brief.md` and scroll through the findings/evidence.
 
 That raw run is the required run capture. If the video is too large for FlyRank, upload it to Google Drive and submit the public/viewable link, as the assignment Q&A allows.
+
+## Architecture, observed results and limitations
+
+This is a separate CLI, not a feature executed by the portfolio website.
+
+| Stage | Input and behavior | Output |
+|---|---|---|
+| GitHub context | Read four public portfolio pages; at most 14,000 characters from each | Bounded portfolio context and read/failure log |
+| Research | Send the request and context to Gemini with Google Search grounding enabled | Model response and any exposed citation annotations |
+| Save | Format the response and connection log | `runs/latest-brief.md` unless `--output` changes it |
+
+[BUILD_LOG.md](BUILD_LOG.md) records syntax/help/missing-key checks. A successful live model run is **not recorded**. [EVALS.md](EVALS.md) defines seven behavior cases; none should be called passed without a real observation.
+
+`gemini-3.8-flash` is the configured default string in this source revision, not a verified available model for every account. Use `--model` or `GEMINI_MODEL` for a model actually supported by your provider account and grounding setup. The dependency specifies a version range, not a locked environment. This package does not claim a fully reproduced provider run.
+
+The five-finding cap, source preference, uncertainty labels and read-only rules are prompt instructions. They are not a deterministic factuality checker or a measured search/action budget. The program requests grounding but does not independently prove every claim is grounded, verify each citation, or enforce an end-to-end provider timeout. Partial GitHub reads may continue with warnings. Human review must inspect the log, underlying sources, dates and conclusions.
+
+A missing key exits with code 2; no readable GitHub source exits with 3; model failure with 4; empty output with 5; missing dependency with 6. Never record a failure as a successful brief or replace it with a prewritten result.
+
+## FL-09 documentation and recording
+
+For the 3–5 minute FL-09 demonstration, use the [new recording guide](../capstone/DEMO_GUIDE.md), not the older FL-07 two-minute recording target. Explain one design choice and one limitation on camera, run the actual CLI, and show its resulting Markdown. [The package index](../capstone/README.md) tracks the missing video and final handoff items.
+
+AI assistance was used for this implementation and documentation. Eduardo should explain the choices, operate the demonstration, review source claims, and personalize the narration before submission.

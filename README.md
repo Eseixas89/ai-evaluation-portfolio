@@ -4,6 +4,70 @@ Personal portfolio for AI evaluation, data quality, science education, and appli
 
 **Live site:** https://eseixas89.github.io/ai-evaluation-portfolio/
 
+
+## Start here: final package
+
+[FL-09 / FL-10 package index](capstone/README.md) links the available track artifacts, documentation, recording guide, retrospective draft, and outstanding final-review items. This is a prepared submission package, not a claim that the video, hours log, public post, FlyRank-hosted URL, or final sign-off is complete.
+
+## Who this is for and what works
+
+Recruiters and reviewers can inspect AI-evaluation case studies, project decisions, and the evidence behind them. The working **live evidence explorer** retrieves public repository metadata; it does not generate an AI answer or assess the correctness of the files it discovers. The separate **Research Scout** is a Python/Gemini research-agent implementation with its live model run still awaiting evidence.
+
+## Reproduce the website
+
+Requirements: Git and Python 3.10+ for the commands below; a current browser. No npm install, database, or private key is required to serve the site.
+
+```bash
+git clone https://github.com/Eseixas89/ai-evaluation-portfolio.git
+cd ai-evaluation-portfolio
+python -m http.server 8000
+```
+
+On Windows, use `py -m http.server 8000` if Python is installed as `py`. Open http://localhost:8000/ and then http://localhost:8000/live-evidence.html.
+
+Usage example:
+
+1. Leave **Research Scout** selected and choose **Load live evidence**.
+2. Inspect the fetched time, snapshot commit, and source-file links.
+3. Open a file: its URL should include the same full commit SHA.
+4. Change to the workflow and load again within five minutes. The same-tab snapshot is reused.
+5. Stop the server with Ctrl+C.
+
+Internet access to the public GitHub API is required for the dynamic lookup. A successful load discovers available files; it does not mean the Scout ran successfully. Do not expect a fixed current commit or file count.
+
+## Architecture sketch
+
+```mermaid
+flowchart TD
+    V["Visitor's browser"] --> P["GitHub Pages: static files"]
+    V --> C["GitHub API: current commit"]
+    C --> T["GitHub API: tree at that commit"]
+    T --> R["Browser: validate, filter and render"]
+    R --> F["GitHub files: links pinned to commit"]
+    R --> V
+    V -. "page-view beacon" .-> A["Cloudflare Web Analytics"]
+```
+
+The browser contains the selection logic and five-minute in-memory cache. GitHub's public API supplies the data; there is no custom backend. A 15-second timeout and readable failure states cover unavailable or incomplete responses. The original static-stack rationale predates this read-only integration; it remains the historical decision record.
+
+The Research Scout follows a separate path: a Python CLI reads four public GitHub artifacts, sends context and the request to Gemini with Google Search grounding, and writes a Markdown brief. See [agent setup and usage](fl-07-agent/README.md). Loading the website does not start that process.
+
+## Evidence, results and limitations
+
+| Area | Recorded result | Practical limit |
+|---|---|---|
+| Evidence explorer | [Real public-browser run](make-it-do-something.md) and [hardening review](hardening-review.html) | File discovery is not content verification or a model run. Public API limits and network failures can stop the lookup. |
+| Browser regression checks | 23 scenarios passed in the documented hardening run | API failure cases used fixtures; see [test methods](tests/README.md). |
+| Physical phone | Owner confirmed navigation, CV download and demo on Samsung A15; fresh opening recorded in [launch evidence](launch-readiness.html) | Device-specific owner observation, not every device/browser. |
+| Analytics | Owner screenshot shows 3 visits and 3 page views for the hostname over the displayed last-24-hours window | Not proof of three distinct people, organic traffic, or project-path totals. |
+| Research Scout | Implementation, build log and seven evaluation cases are available | A successful live Gemini run, grounded report and recording are not recorded yet. Defined evaluations are not passed evaluations. |
+
+Previous audit counts and timestamps describe their recorded snapshots. They are not an automatic certification of later revisions. The live website includes Cloudflare analytics; serving the same HTML locally retains the beacon. The local preview is not a controlled analytics experiment.
+
+## AI involvement and ownership
+
+ChatGPT/Codex assisted with planning, code, documentation, debugging and verification. Eduardo supplied the project context, constraints, peer feedback and physical-phone observations. The repository records what was actually checked and what remains unverified. The first-person retrospective and recording narration are AI-assisted drafts for Eduardo to review and personalize. No claim of unaided authorship, live-agent success, or FlyRank approval is made.
+
 ## Website files
 
 - `index.html`: portfolio content, sections, navigation, and links.
