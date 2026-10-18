@@ -1,0 +1,14 @@
+{
+  "checkedAt": "2026-10-18T03:19:26.586Z",
+  "url": "https://eseixas89.github.io/ai-evaluation-portfolio/",
+  "method": "Actual Chromium page load, without API fixtures",
+  "responses": [],
+  "requestFailures": [],
+  "pageErrors": [],
+  "dashboardConfirmed": false,
+  "note": "Automated verification traffic is not organic traffic; Cloudflare bot filtering may exclude these events from dashboard counts.",
+  "environmentProxyUsed": true,
+  "browser": "153.0.8010.0",
+  "passed": false,
+  "error": "page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://eseixas89.github.io/ai-evaluation-portfolio/\nCall log:\n\u001b[2m  - navigating to \"https://eseixas89.github.io/ai-evaluation-portfolio/\", waiting until \"load\"\u001b[22m\n"
+}

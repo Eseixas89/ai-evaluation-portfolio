@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-17T19:22:57.187459+00:00",
+  "checkedAt": "2026-10-18T03:19:56.188861+00:00",
   "method": "Public HTTPS GET with normal certificate verification; deployed HTML metadata inspected",
   "finalUrl": "https://eseixas89.github.io/ai-evaluation-portfolio/",
   "addressChoice": "Existing free GitHub Pages subdomain retained under the portal Q&A fallback; no paid custom domain or DNS change made.",
@@ -16,7 +16,9 @@
       "twitterCard": null,
       "favicon": "https://eseixas89.github.io/ai-evaluation-portfolio/favicon.svg",
       "mixedContentResources": [],
-      "analyticsScripts": [],
+      "analyticsScripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js"
+      ],
       "failures": [],
       "passed": true
     },
@@ -32,7 +34,9 @@
       "twitterCard": "summary_large_image",
       "favicon": "favicon.svg",
       "mixedContentResources": [],
-      "analyticsScripts": [],
+      "analyticsScripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js"
+      ],
       "failures": [],
       "passed": true
     },
@@ -48,7 +52,9 @@
       "twitterCard": "summary_large_image",
       "favicon": "favicon.svg",
       "mixedContentResources": [],
-      "analyticsScripts": [],
+      "analyticsScripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js"
+      ],
       "failures": [],
       "passed": true
     },
@@ -64,7 +70,9 @@
       "twitterCard": "summary_large_image",
       "favicon": "favicon.svg",
       "mixedContentResources": [],
-      "analyticsScripts": [],
+      "analyticsScripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js"
+      ],
       "failures": [],
       "passed": true
     },
@@ -80,7 +88,9 @@
       "twitterCard": "summary_large_image",
       "favicon": "favicon.svg",
       "mixedContentResources": [],
-      "analyticsScripts": [],
+      "analyticsScripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js"
+      ],
       "failures": [],
       "passed": true
     },
@@ -96,7 +106,9 @@
       "twitterCard": "summary_large_image",
       "favicon": "favicon.svg",
       "mixedContentResources": [],
-      "analyticsScripts": [],
+      "analyticsScripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js"
+      ],
       "failures": [],
       "passed": true
     },
@@ -112,7 +124,9 @@
       "twitterCard": "summary_large_image",
       "favicon": "favicon.svg",
       "mixedContentResources": [],
-      "analyticsScripts": [],
+      "analyticsScripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js"
+      ],
       "failures": [],
       "passed": true
     },
@@ -128,7 +142,9 @@
       "twitterCard": "summary_large_image",
       "favicon": "favicon.svg",
       "mixedContentResources": [],
-      "analyticsScripts": [],
+      "analyticsScripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js"
+      ],
       "failures": [],
       "passed": true
     },
@@ -144,7 +160,27 @@
       "twitterCard": "summary_large_image",
       "favicon": "favicon.svg",
       "mixedContentResources": [],
-      "analyticsScripts": [],
+      "analyticsScripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js"
+      ],
+      "failures": [],
+      "passed": true
+    },
+    {
+      "path": "launch-readiness.html",
+      "status": 200,
+      "tlsVerificationResult": 0,
+      "url": "https://eseixas89.github.io/ai-evaluation-portfolio/launch-readiness.html",
+      "title": "Domain, analytics and badge | Eduardo Seixas",
+      "description": "Plant Your Flag: Eduardo Seixas's public HTTPS address, launch metadata checks, and the remaining analytics and issued-badge requirements.",
+      "canonical": "https://eseixas89.github.io/ai-evaluation-portfolio/launch-readiness.html",
+      "ogImage": "https://eseixas89.github.io/ai-evaluation-portfolio/assets/social-preview.png",
+      "twitterCard": "summary_large_image",
+      "favicon": "favicon.svg",
+      "mixedContentResources": [],
+      "analyticsScripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js"
+      ],
       "failures": [],
       "passed": true
     },
@@ -160,7 +196,9 @@
       "twitterCard": "summary_large_image",
       "favicon": "favicon.svg",
       "mixedContentResources": [],
-      "analyticsScripts": [],
+      "analyticsScripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js"
+      ],
       "failures": [],
       "passed": true
     },
@@ -176,7 +214,9 @@
       "twitterCard": "summary_large_image",
       "favicon": "favicon.svg",
       "mixedContentResources": [],
-      "analyticsScripts": [],
+      "analyticsScripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js"
+      ],
       "failures": [],
       "passed": true
     },
@@ -192,7 +232,9 @@
       "twitterCard": "summary_large_image",
       "favicon": "favicon.svg",
       "mixedContentResources": [],
-      "analyticsScripts": [],
+      "analyticsScripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js"
+      ],
       "failures": [],
       "passed": true
     },
@@ -208,7 +250,9 @@
       "twitterCard": "summary_large_image",
       "favicon": "favicon.svg",
       "mixedContentResources": [],
-      "analyticsScripts": [],
+      "analyticsScripts": [
+        "https://static.cloudflareinsights.com/beacon.min.js"
+      ],
       "failures": [],
       "passed": true
     }
@@ -228,11 +272,10 @@
     "height": 630
   },
   "analytics": {
-    "status": "installed; published-browser verification pending",
+    "status": "installed; published script configuration verified; dashboard confirmation pending",
     "provider": "Cloudflare Web Analytics",
     "scriptUrl": "https://static.cloudflareinsights.com/beacon.min.js",
     "scriptType": "module",
-    "snippetSuppliedDate": "2026-10-18",
     "installedHtmlPages": [
       "404.html",
       "agent-concepts-mcp-basics.html",
@@ -250,7 +293,7 @@
       "stack-rationale.html"
     ],
     "dashboardConfirmed": false,
-    "dashboardScreenshot": null
+    "verificationRecord": "assets/launch/analytics-verification.json"
   },
   "badge": {
     "status": "awaiting issued credential details",
@@ -268,5 +311,5 @@
   },
   "sharePreviewPlatformCheck": "Metadata and image delivery checked; platform-specific cache refresh not observed.",
   "passedPublicChecks": true,
-  "verifiedDeploymentCommit": "b4832367d17ec6a58ac90362cc2cc2450086d2f8"
+  "verifiedDeploymentCommit": "c364839f9f12b75fce1350c0aae4139aaca68634"
 }

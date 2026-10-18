@@ -1,0 +1,35 @@
+{
+  "checkedAt": "2026-10-18T03:21:51.225663+00:00",
+  "deployedCommit": "c364839f9f12b75fce1350c0aae4139aaca68634",
+  "installation": {
+    "htmlPages": 14,
+    "exactSnippetPreserved": true,
+    "oneBeaconPerPage": true,
+    "publicHtmlChecksPassed": true
+  },
+  "workBrowserObservation": {
+    "page": "https://eseixas89.github.io/ai-evaluation-portfolio/",
+    "scriptPresent": true,
+    "scriptType": "module",
+    "siteTokenMatchesUserSnippet": true,
+    "applicationScriptErrorObserved": false
+  },
+  "networkAcknowledgement": {
+    "status": "not independently observed",
+    "reason": "The local test browser could not open the HTTPS page because its environment reported ERR_CERT_AUTHORITY_INVALID. The Work browser opened the site and exposed the matching script configuration; its available inspection API does not expose network acknowledgements. Normal HTTPS certificate verification passed in the public GET checks. No certificate check was bypassed.",
+    "localAttempt": "analytics-local-browser-attempt.json"
+  },
+  "dashboard": {
+    "confirmed": false,
+    "visits": null,
+    "pageViews": null,
+    "screenshot": null
+  },
+  "nextStep": "Open the portfolio normally, allow time for processing, then check the owner dashboard and capture an actual page view. Automated checks are not organic visitors and may be filtered as bots.",
+  "beaconAssetReachability": {
+    "status": 200,
+    "contentType": "text/javascript;charset=UTF-8",
+    "accessControlAllowOrigin": "*",
+    "checkedWith": "curl HEAD with normal TLS verification"
+  }
+}

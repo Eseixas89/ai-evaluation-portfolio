@@ -8,7 +8,7 @@ The assignment's portal Q&A accepts any free subdomain. This site keeps the exis
 
 The owner registered the hostname and supplied its public installation snippet on 18 October 2026. That exact module script is installed before `</body>` in all fourteen HTML pages. The public site token belongs in page source; no private account key was added.
 
-Remaining verification: confirm the published beacon loads, inspect a real collection request, then open the site normally and capture an actual dashboard visit. Automated smoke-test events may be excluded by bot filtering and are not organic traffic. The dashboard screenshot remains outstanding until supplied or observed.
+The published beacon configuration and fourteen public HTTPS/metadata checks are verified. A network acknowledgement and dashboard data are not yet confirmed. Open the site normally and capture an actual dashboard visit. Automated smoke-test events may be excluded by bot filtering and are not organic traffic. The dashboard screenshot remains outstanding until supplied or observed.
 
 Official instructions: https://developers.cloudflare.com/web-analytics/get-started/
 
