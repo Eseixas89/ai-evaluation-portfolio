@@ -6,11 +6,9 @@ The assignment's portal Q&A accepts any free subdomain. This site keeps the exis
 
 ## Cloudflare Web Analytics
 
-1. In your Cloudflare account, open **Web Analytics → Add a site** and register `eseixas89.github.io` as the hostname, without a scheme or path.
-2. Copy the public JavaScript snippet from **Manage site** and provide it for installation before `</body>` on the portfolio pages. No password or private API key is needed.
-3. After deployment, load the portfolio, confirm the beacon request, and verify an actual dashboard visit. Data may take a few minutes to appear.
-4. Capture the real analytics screen for the submission; exclude unrelated account information. Update the launch record with the observed result.
-No analytics token or script has been installed yet. The page must not be described as collecting visitors until the account setup, installation, and live verification happen.
+The owner registered the hostname and supplied its public installation snippet on 18 October 2026. That exact module script is installed before `</body>` in all fourteen HTML pages. The public site token belongs in page source; no private account key was added.
+
+Remaining verification: confirm the published beacon loads, inspect a real collection request, then open the site normally and capture an actual dashboard visit. Automated smoke-test events may be excluded by bot filtering and are not organic traffic. The dashboard screenshot remains outstanding until supplied or observed.
 
 Official instructions: https://developers.cloudflare.com/web-analytics/get-started/
 
