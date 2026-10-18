@@ -101,6 +101,11 @@ dimensions = struct.unpack('>II', image[16:24])
 assert dimensions == (1200, 630)
 evidence_path = Path('assets/launch/launch-checks.json')
 previous = json.loads(evidence_path.read_text()) if evidence_path.exists() else {}
+analytics = {'status': 'script detected; collection not verified' if any(page.get('analyticsScripts') for page in pages) else 'not installed', 'reason': 'A dashboard visit must be verified separately; script detection alone does not prove collection.'}
+# Dashboard screenshots are separate owner evidence; retain that record when the beacon remains present.
+if pages and all(any('cloudflareinsights' in script for script in page.get('analyticsScripts', []))
+                 for page in pages) and previous.get('analytics', {}).get('dashboardConfirmed'):
+    analytics = previous['analytics']
 report = {
     'checkedAt': datetime.datetime.now(datetime.timezone.utc).isoformat(),
     'method': 'Public HTTPS GET with normal certificate verification; deployed HTML metadata inspected',
@@ -108,7 +113,7 @@ report = {
     'addressChoice': 'Existing free GitHub Pages subdomain retained under the portal Q&A fallback; no paid custom domain or DNS change made.',
     'pages': pages, 'favicon': favicon_check,
     'socialPreview': dict(image_check, width=dimensions[0], height=dimensions[1]),
-    'analytics': {'status': 'script detected; collection not verified' if any(page.get('analyticsScripts') for page in pages) else 'not installed', 'reason': 'A dashboard visit must be verified separately; script detection alone does not prove collection.'},
+    'analytics': analytics,
     'badge': {'status': 'awaiting issued credential details', 'reason': 'No issued credential ID has been provided; issuance status has not been confirmed.'},
     'physicalPhoneRecheck': previous.get('physicalPhoneRecheck', {'status': 'pending', 'device': 'Samsung A15', 'note': 'A new owner phone confirmation has not been recorded.'}),
     'sharePreviewPlatformCheck': 'Metadata and image delivery checked; platform-specific cache refresh not observed.',

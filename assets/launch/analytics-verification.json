@@ -20,12 +20,17 @@
     "localAttempt": "analytics-local-browser-attempt.json"
   },
   "dashboard": {
-    "confirmed": false,
-    "visits": null,
-    "pageViews": null,
-    "screenshot": null
+    "confirmed": true,
+    "hostname": "eseixas89.github.io",
+    "visits": 3,
+    "pageViews": 3,
+    "window": "Last 24 hrs",
+    "source": "Owner-supplied Cloudflare Web Analytics dashboard screenshot",
+    "receivedAt": "2026-10-18T00:28:08-03:00",
+    "screenshot": "assets/launch/cloudflare-dashboard-2026-10-18.png",
+    "scope": "Hostname-level dashboard totals; not proof of three distinct people, organic visitors, or traffic to a particular project path."
   },
-  "nextStep": "Open the portfolio normally, allow time for processing, then check the owner dashboard and capture an actual page view. Automated checks are not organic visitors and may be filtered as bots.",
+  "nextStep": "Submit the public portfolio and launch record URLs with the dashboard screenshot. Add the graduate badge after the credential is issued, under the portal Q&A timing exception.",
   "beaconAssetReachability": {
     "status": 200,
     "contentType": "text/javascript;charset=UTF-8",

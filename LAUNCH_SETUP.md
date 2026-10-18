@@ -1,4 +1,4 @@
-# Plant Your Flag: remaining setup
+# Plant Your Flag: submission and badge handoff
 
 Public address: https://eseixas89.github.io/ai-evaluation-portfolio/
 
@@ -8,7 +8,7 @@ The assignment's portal Q&A accepts any free subdomain. This site keeps the exis
 
 The owner registered the hostname and supplied its public installation snippet on 18 October 2026. That exact module script is installed before `</body>` in all fourteen HTML pages. The public site token belongs in page source; no private account key was added.
 
-The published beacon configuration and fourteen public HTTPS/metadata checks are verified. A network acknowledgement and dashboard data are not yet confirmed. Open the site normally and capture an actual dashboard visit. Automated smoke-test events may be excluded by bot filtering and are not organic traffic. The dashboard screenshot remains outstanding until supplied or observed.
+The published beacon configuration and fourteen public HTTPS/metadata checks are verified. The owner-supplied [Cloudflare dashboard screenshot](assets/launch/cloudflare-dashboard-2026-10-18.png), received on 18 October 2026 at 00:28 (UTC−03:00), confirms 3 visits and 3 page views for `eseixas89.github.io` in the Last 24 hrs window. These hostname-level totals do not establish three distinct people or organic visitors. A direct network acknowledgement was not observed; dashboard collection is confirmed separately by this screenshot. The structured evidence is in `assets/launch/analytics-verification.json`.
 
 Official instructions: https://developers.cloudflare.com/web-analytics/get-started/
 
@@ -30,4 +30,4 @@ Completed as a fresh opening on 17 October 2026: the owner supplied a Samsung A1
 
 ## Submission
 
-When analytics is installed and verified, submit the public portfolio URL and launch record in **Deliverable links**, one URL per line. Attach the real analytics screenshot under **Files**. If the badge is still awaiting issuance, describe that status in **Notes** under the portal's timing exception, then update the site when it is issued. Click **Save submission** in the portal to hand it in.
+Analytics collection is now confirmed. Submit the public portfolio URL and launch record in **Deliverable links**, one URL per line. Attach the real analytics screenshot under **Files**. If the badge is still awaiting issuance, describe that status in **Notes** under the portal's timing exception, then update the site when it is issued. Click **Save submission** in the portal to hand it in.
